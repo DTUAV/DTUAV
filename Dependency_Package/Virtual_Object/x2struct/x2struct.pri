@@ -1,0 +1,3 @@
+INCLUDEPATH += $$PWD
+DEFINES += XTOSTRUCT_QT
+HEADERS += $$PWD/x2struct.hpp
