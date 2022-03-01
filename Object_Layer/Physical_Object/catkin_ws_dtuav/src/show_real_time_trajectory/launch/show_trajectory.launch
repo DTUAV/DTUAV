@@ -1,0 +1,6 @@
+<launch>
+<node name="show_real_time_trajectory" pkg="show_real_time_trajectory" type="real_time_trajectory_node" output="screen">
+    <param name="local_pose_sub_topic" value="/mavros/local_position/local"/>
+    <param name="path_pub_topic" value="/path"/>
+  </node>
+</launch>
