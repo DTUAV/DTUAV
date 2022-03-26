@@ -1,0 +1,221 @@
+<launch>
+<node name="global_network_node" pkg="dt_global_network_client" type="dt_global_network_client_node" output="screen">
+    <param name="product_key" value="a1GcqS5WFte" />
+    <param name="device_name" value="R_UAV_0" />
+    <param name="device_secret" value="a516eead0501ed260f7caf87143b05d6"/>
+    <param name="iot_pub_topic" value="/a1GcqS5WFte/R_UAV_0/user/R_UAV_0_PUB"/>
+    <param name="iot_sub_topic" value="/a1GcqS5WFte/R_UAV_0/user/R_UAV_0_SUB"/>
+    <param name="ros_sub_topic" value="/to/cloud_server/data"/>
+    <param name="ros_pub_topic" value="/from/cloud_server/data"/>
+    <param name="ros_iot_state_pub_topic" value="/cloud_connect_state"/>
+    <param name="object_name" value="R_UAV_0"/>
+  </node>
+  <node name="packing_and_unpacking_node1" pkg="dt_message_packing_unpacking" type="dt_message_packing_unpacking_node" output="screen">
+        <!--packing-->
+        <param name="SourceID" value="1"/>
+        <param name="TargetID" value="201"/>
+        <param name="DtObjectID" value="201"/>
+        <param name="IotMessagePubTopic" value="/to/cloud_server/data"/>
+        <param name="GlobalPositionMessageSubTopic" value="/mavros/global_position/global"/>
+        <param name="LocalPositionMessageSubTopic" value="/mavros/local_position/pose"/>
+        <param name="LocalVelocityMessageSubTopic" value="/mavros/local_position/velocity"/>
+        <param name="UavStateMessageSubTopic" value="/mavros/state"/>
+        <param name="MessagePubFrequency" value="10"/>
+
+        <!--unpacking-->
+        <param name="IotMessageSubTopic" value="/from/cloud_server/data"/>
+
+        <param name="cloud_server_local_position_pub_topic" value="/cloud_server/target/local_position"/>
+        <param name="cloud_server_global_position_pub_topic" value="/cloud_server/target/global_position"/>
+        <param name="cloud_server_velocity_pub_topic" value="/cloud_server/target/velocity"/>
+        <param name="cloud_server_control_apply_pub_topic" value="/cloud_server/control/apply"/>
+        <param name="cloud_server_target_cmd_type_pub_topic" value="/cloud_server/target_cmd_type"/>
+
+
+        <param name="local_server_local_position_pub_topic" value="/local_server/target/local_position"/>
+        <param name="local_server_global_position_pub_topic" value="/local_server/target/global_position"/>
+        <param name="local_server_velocity_pub_topic" value="/local_server/target/velocity"/>
+        <param name="local_server_control_apply_pub_topic" value="/local_server/control/apply"/>
+        <param name="local_server_target_cmd_type_pub_topic" value="/local_server/target_cmd_type"/>
+
+        <param name="vr_server_local_position_pub_topic" value="/vr_server/target/local_position"/>
+        <param name="vr_server_global_position_pub_topic" value="/vr_server/target/global_position"/>
+        <param name="vr_server_velocity_pub_topic" value="/vr_server/target/velocity"/>
+        <param name="vr_server_control_apply_pub_topic" value="/vr_server/control/apply"/>
+        <param name="vr_server_target_cmd_type_pub_topic" value="/vr_server/target_cmd_type"/>
+
+        <param name="dt_object_local_position_pub_topic" value="/dt_object/target/local_position"/>
+        <param name="dt_object_global_position_pub_topic" value="/dt_object/target/global_position"/>
+        <param name="dt_object_velocity_pub_topic" value="/dt_object/target/velocity"/>
+        <param name="dt_object_control_apply_pub_topic" value="/dt_object/control/apply"/>
+        <param name="dt_object_target_cmd_type_pub_topic" value="/dt_object/target_cmd_type"/>
+
+
+  </node>
+
+<node name="local_network_node" pkg="dt_local_network_client" type="dt_local_network_client_node" output="screen">
+      <param name="port" value="8080" />
+      <param name="ros_pub_topic" value="/from/local_server/data" />
+      <param name="ros_sub_topic" value="/to/local_server/data"/>
+      <param name="data_recv_rate_hz" value="1000"/>
+      <param name="server_ip" value="100.101.155.46"/>
+</node>
+
+<node name="packing_and_unpacking_node2" pkg="dt_message_packing_unpacking" type="dt_message_packing_unpacking_node" output="screen">
+      <!--packing-->
+      <param name="SourceID" value="1"/>
+      <param name="TargetID" value="201"/>
+      <param name="DtObjectID" value="201"/>
+      <param name="IotMessagePubTopic" value="/to/local_server/data"/>
+      <param name="GlobalPositionMessageSubTopic" value="/mavros/global_position/global"/>
+      <param name="LocalPositionMessageSubTopic" value="/mavros/local_position/pose"/>
+      <param name="LocalVelocityMessageSubTopic" value="/mavros/local_position/velocity"/>
+      <param name="UavStateMessageSubTopic" value="/mavros/state"/>
+      <param name="MessagePubFrequency" value="10"/>
+
+      <!--unpacking-->
+      <param name="IotMessageSubTopic" value="/from/local_server/data"/>
+
+      <param name="cloud_server_local_position_pub_topic" value="/cloud_server/target/local_position"/>
+      <param name="cloud_server_global_position_pub_topic" value="/cloud_server/target/global_position"/>
+      <param name="cloud_server_velocity_pub_topic" value="/cloud_server/target/velocity"/>
+      <param name="cloud_server_control_apply_pub_topic" value="/cloud_server/control/apply"/>
+      <param name="cloud_server_target_cmd_type_pub_topic" value="/cloud_server/target_cmd_type"/>
+
+
+      <param name="local_server_local_position_pub_topic" value="/local_server/target/local_position"/>
+      <param name="local_server_global_position_pub_topic" value="/local_server/target/global_position"/>
+      <param name="local_server_velocity_pub_topic" value="/local_server/target/velocity"/>
+      <param name="local_server_control_apply_pub_topic" value="/local_server/control/apply"/>
+      <param name="local_server_target_cmd_type_pub_topic" value="/local_server/target_cmd_type"/>
+
+      <param name="vr_server_local_position_pub_topic" value="/vr_server/target/local_position"/>
+      <param name="vr_server_global_position_pub_topic" value="/vr_server/target/global_position"/>
+      <param name="vr_server_velocity_pub_topic" value="/vr_server/target/velocity"/>
+      <param name="vr_server_control_apply_pub_topic" value="/vr_server/control/apply"/>
+      <param name="vr_server_target_cmd_type_pub_topic" value="/vr_server/target_cmd_type"/>
+
+      <param name="dt_object_local_position_pub_topic" value="/dt_object/target/local_position"/>
+      <param name="dt_object_global_position_pub_topic" value="/dt_object/target/global_position"/>
+      <param name="dt_object_velocity_pub_topic" value="/dt_object/target/velocity"/>
+      <param name="dt_object_control_apply_pub_topic" value="/dt_object/control/apply"/>
+      <param name="dt_object_target_cmd_type_pub_topic" value="/dt_object/target_cmd_type"/>
+</node>
+
+<node name="mission_node" pkg="dt_mission" type="dt_mission_node" output="screen">
+
+<!--mission_point-->
+    <rosparam file="$(find dt_mission)/config/mission_point.yaml" command="load"/>
+    <param name="mission_point_err" value="0.05"/>
+    <param name="mission_control_sub_topic" value="/dt_mission/start"/>
+    <param name="mission_change_type" value="0"/>                 <!--0:Auto 1:Other-->
+    <param name="feeback_sub_topic" value="/mavros/local_position/pose"/>
+    <param name="next_mission_point_sub_topic" value="/dt_mission/mission_control/next"/>
+    <param name="mission_point_pub_topic" value="/dt_mission/mission_point"/>
+    <param name="yawl_file_name" value="mission_point"/>
+    <param name="circle_run" value="0"/>                          <!--0:Not Circle Run. 1:Circle Run-->
+
+    <param name="local_machine_local_position_pub_topic" value="/local_machine/target/local_position"/>
+    <param name="local_machine_global_position_pub_topic" value="/local_machine/target/global_position"/>
+    <param name="local_machine_velocity_pub_topic" value="/local_machine/target/velocity"/>
+    <param name="local_machine_control_apply_pub_topic" value="/local_machine/control/apply"/>
+    <param name="local_machine_target_cmd_type_pub_topic" value="/local_machine/target_cmd_type"/>
+   <!--generate path-->
+    <param name="init_x" value="0.0"/>
+    <param name="init_y" value="0.0"/>
+    <param name="init_z" value="0.0"/>
+     <param name="init_velocity_x" value = "0.0"/>
+     <param name="init_velocity_y" value = "0.0"/>
+     <param name="init_velocity_z" value = "0.0"/>
+     <param name="max_velocity_x" value = "1.5"/>
+     <param name="max_velocity_y" value = "1.5"/>
+     <param name="max_velocity_z" value = "1.5"/>
+     <param name="max_acc_x" value = "3.0"/>
+     <param name="max_acc_y" value = "3.0"/>
+     <param name="max_acc_z" value = "3.0"/>
+     <param name="max_jerk_x" value = "12.0"/>
+     <param name="max_jerk_y" value = "12.0"/>
+     <param name="max_jerK_z" value = "12.0"/>
+     <param name="TargetPosSubTopic" value="/target_position"/>
+     <param name="RefPosPubTopic" value ="/mavros/setpoint_position/local"/>
+     <param name="curPositionSubTopic" value="/mavros/local_position/pose"/>
+     <param name="curVelocitySubTopic" value="/mavros/local_position/velocity"/>
+     <param name="UpdateHz" value="50"/>
+
+  </node>
+
+<node name="px4_control_node" pkg="dt_px4_control" type="dt_px4_control_node" output="screen">
+      <!--dt px4 control-->
+      <param name="rc_sub_topic" value="/mavros/rc/in"/>
+      <param name="local_pose_sub_topic" value ="/mavros/local_position/pose"/>
+      <param name="global_position_sub_topic" value="/mavros/global_position/global"/>
+      <param name="target_velocity_pub_topic" value="/mavros/setpoint_velocity/cmd_vel_unstamped"/>
+      <param name="target_local_position_pub_topic" value="/mavros/setpoint_position/local"/>
+      <param name="target_global_position_pub_topic" value="/mavros/setpoint_position/global"/>
+      <param name="velocity_cmd_sub_topic" value="/control/cmd/velocity"/>
+      <param name="local_position_cmd_sub_topic" value="/control/cmd/local_position"/>
+      <param name="global_position_cmd_sub_topic" value="/control/cmd/global_position"/>
+      <param name="control_start_type" value="0"/>         <!--[0]:Auto Enter Offboard Control Way&& Auto Arm    [1]:Auto Enter Offboard && Manual Arm [2]:Manual Enter Offboard Control Way && Auto Arm  [4] Manual Enter Offboard Control Way && Manual Arm -->
+      <param name="start_type" value="0"/>           <!--[0]:Start By RC Controller [1]:Start By Cloud Command [2]:Start By Local Server [3]:Start By VR Server-->
+
+     <!--RC Controller Relatived Channeles If Select the Start Way is [0]: Start By RC Controller, You Should Config This Paramters-->
+      <param name="rc_ref_cmd_channel" value="8"/>
+      <param name="rc_ref_cmd_way" value="0"/>        <!--[0]: Velocity Control [1]:Local Position Control [2]:Global Position Control-->
+      <param name="rc_land_channel" value="6"/>
+
+      <param name="px4_state_msg_sub_topic" value="/mavros/state"/>                                        <!--The State of PX4-->
+      <param name="px4_arming_client_topic" value="/mavros/cmd/arming"/>                                   <!--The Arm to PX4-->
+      <param name="px4_set_mode_client_topic" value="/mavros/set_mode"/>                                   <!--The mode setting to PX4-->
+      <param name="run_frequency_hz" value="20.0"/>                                                          <!--The Frequen of Target Velocity Message To PX4-->
+
+      <param name="change_control_type_sub_topic" value="/target_cmd_type"/>   <!--[0]:Velocity Control [1]: Local Position Control [2]:Global Position Control-->
+
+      <param name="is_use_gps" value="true"/>
+
+
+
+      <!--control_cmd_wrapper-->
+
+      <param name="velocity_cmd_pub_topic" value="/control/cmd/velocity"/>
+      <param name="local_position_cmd_pub_topic" value="/control/cmd/local_position"/>
+      <param name="global_position_cmd_pub_topic" value="/control/cmd/global_position"/>
+
+
+      <param name="cloud_server_local_position_sub_topic" value="/cloud_server/target/local_position"/>
+      <param name="cloud_server_global_position_sub_topic" value="/cloud_server/target/global_position"/>
+      <param name="cloud_server_velocity_sub_topic" value="/cloud_server/target/velocity"/>
+      <param name="cloud_server_control_apply_sub_topic" value="/cloud_server/control/apply"/>
+      <param name="cloud_server_target_cmd_type_sub_topic" value="/cloud_server/target_cmd_type"/>
+
+
+      <param name="local_server_local_position_sub_topic" value="/local_server/target/local_position"/>
+      <param name="local_server_global_position_sub_topic" value="/local_server/target/global_position"/>
+      <param name="local_server_velocity_sub_topic" value="/local_server/target/velocity"/>
+      <param name="local_server_control_apply_sub_topic" value="/local_server/control/apply"/>
+      <param name="local_server_target_cmd_type_sub_topic" value="/local_server/target_cmd_type"/>
+
+      <param name="vr_server_local_position_sub_topic" value="/vr_server/target/local_position"/>
+      <param name="vr_server_global_position_sub_topic" value="/vr_server/target/global_position"/>
+      <param name="vr_server_velocity_sub_topic" value="/vr_server/target/velocity"/>
+      <param name="vr_server_control_apply_sub_topic" value="/vr_server/control/apply"/>
+      <param name="vr_server_target_cmd_type_sub_topic" value="/vr_server/target_cmd_type"/>
+
+      <param name="dt_object_local_position_sub_topic" value="/dt_object/target/local_position"/>
+      <param name="dt_object_global_position_sub_topic" value="/dt_object/target/global_position"/>
+      <param name="dt_object_velocity_sub_topic" value="/dt_object/target/velocity"/>
+      <param name="dt_object_control_apply_sub_topic" value="/dt_object/control/apply"/>
+      <param name="dt_object_target_cmd_type_sub_topic" value="/dt_object/target_cmd_type"/>
+
+      <param name="local_machine_local_position_sub_topic" value="/local_machine/target/local_position"/>
+      <param name="local_machine_global_position_sub_topic" value="/local_machine/target/global_position"/>
+      <param name="local_machine_velocity_sub_topic" value="/local_machine/target/velocity"/>
+      <param name="local_machine_control_apply_sub_topic" value="/local_machine/control/apply"/>
+      <param name="local_machine_target_cmd_type_sub_topic" value="/local_machine/target_cmd_type"/>
+
+      <param name="cur_control_type_pub_topic" value="/cur_control_type"/>
+      <param name="control_type_pub_frequency" value="1.0"/>
+
+      <param name="target_cmd_type_pub_topic" value="/target_cmd_type"/>
+      </node>
+
+</launch>

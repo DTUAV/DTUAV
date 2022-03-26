@@ -1,0 +1,3 @@
+float64 ref_position_x
+float64 ref_position_y
+float64 ref_position_z
