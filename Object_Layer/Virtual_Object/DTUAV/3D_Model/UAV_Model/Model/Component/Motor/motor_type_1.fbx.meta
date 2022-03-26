@@ -1,0 +1,288 @@
+fileFormatVersion: 2
+guid: 50cf6cb0dfe9629449e0399c84f0a8b0
+ModelImporter:
+  serializedVersion: 24
+  fileIDToRecycleName:
+    100000: coil
+    100002: coil1
+    100004: coil2
+    100006: coil3
+    100008: coil4
+    100010: coil5
+    100012: coil6
+    100014: coil7
+    100016: coil8
+    100018: coil9
+    100020: coil_7_1
+    100022: coil_7_1 1
+    100024: coil_7_1 2
+    100026: coil_7_1 3
+    100028: coil_7_1 4
+    100030: coil_7_1 5
+    100032: coil_7_1 6
+    100034: coil_7_1 7
+    100036: coil_7_1 8
+    100038: coil_7_1 9
+    100040: coil_7_2
+    100042: coil_7_2 1
+    100044: coil_7_2 2
+    100046: coil_7_2 3
+    100048: coil_7_2 4
+    100050: coil_7_2 5
+    100052: coil_7_2 6
+    100054: coil_7_2 7
+    100056: coil_7_2 8
+    100058: coil_7_2 9
+    100060: coil_7_3
+    100062: coil_7_3 1
+    100064: coil_7_3 2
+    100066: coil_7_3 3
+    100068: coil_7_3 4
+    100070: coil_7_3 5
+    100072: coil_7_3 6
+    100074: coil_7_3 7
+    100076: coil_7_3 8
+    100078: coil_7_3 9
+    100080: coil_7_4
+    100082: coil_7_4 1
+    100084: coil_7_4 2
+    100086: coil_7_4 3
+    100088: coil_7_4 4
+    100090: coil_7_4 5
+    100092: coil_7_4 6
+    100094: coil_7_4 7
+    100096: coil_7_4 8
+    100098: coil_7_4 9
+    100100: coil_7_5
+    100102: coil_7_5 1
+    100104: coil_7_5 2
+    100106: coil_7_5 3
+    100108: coil_7_5 4
+    100110: coil_7_5 5
+    100112: coil_7_5 6
+    100114: coil_7_5 7
+    100116: coil_7_5 8
+    100118: coil_7_5 9
+    100120: coil_7_6
+    100122: coil_7_6 1
+    100124: coil_7_6 2
+    100126: coil_7_6 3
+    100128: coil_7_6 4
+    100130: coil_7_6 5
+    100132: coil_7_6 6
+    100134: coil_7_6 7
+    100136: coil_7_6 8
+    100138: coil_7_6 9
+    100140: motor
+    100142: motor 1
+    100144: motor 2
+    100146: motor4
+    100148: //RootNode
+    100150: pCylinder10
+    100152: pCylinder11
+    100154: rotors4
+    100156: uav
+    400000: coil
+    400002: coil1
+    400004: coil2
+    400006: coil3
+    400008: coil4
+    400010: coil5
+    400012: coil6
+    400014: coil7
+    400016: coil8
+    400018: coil9
+    400020: coil_7_1
+    400022: coil_7_1 1
+    400024: coil_7_1 2
+    400026: coil_7_1 3
+    400028: coil_7_1 4
+    400030: coil_7_1 5
+    400032: coil_7_1 6
+    400034: coil_7_1 7
+    400036: coil_7_1 8
+    400038: coil_7_1 9
+    400040: coil_7_2
+    400042: coil_7_2 1
+    400044: coil_7_2 2
+    400046: coil_7_2 3
+    400048: coil_7_2 4
+    400050: coil_7_2 5
+    400052: coil_7_2 6
+    400054: coil_7_2 7
+    400056: coil_7_2 8
+    400058: coil_7_2 9
+    400060: coil_7_3
+    400062: coil_7_3 1
+    400064: coil_7_3 2
+    400066: coil_7_3 3
+    400068: coil_7_3 4
+    400070: coil_7_3 5
+    400072: coil_7_3 6
+    400074: coil_7_3 7
+    400076: coil_7_3 8
+    400078: coil_7_3 9
+    400080: coil_7_4
+    400082: coil_7_4 1
+    400084: coil_7_4 2
+    400086: coil_7_4 3
+    400088: coil_7_4 4
+    400090: coil_7_4 5
+    400092: coil_7_4 6
+    400094: coil_7_4 7
+    400096: coil_7_4 8
+    400098: coil_7_4 9
+    400100: coil_7_5
+    400102: coil_7_5 1
+    400104: coil_7_5 2
+    400106: coil_7_5 3
+    400108: coil_7_5 4
+    400110: coil_7_5 5
+    400112: coil_7_5 6
+    400114: coil_7_5 7
+    400116: coil_7_5 8
+    400118: coil_7_5 9
+    400120: coil_7_6
+    400122: coil_7_6 1
+    400124: coil_7_6 2
+    400126: coil_7_6 3
+    400128: coil_7_6 4
+    400130: coil_7_6 5
+    400132: coil_7_6 6
+    400134: coil_7_6 7
+    400136: coil_7_6 8
+    400138: coil_7_6 9
+    400140: motor
+    400142: motor 1
+    400144: motor 2
+    400146: motor4
+    400148: //RootNode
+    400150: pCylinder10
+    400152: pCylinder11
+    400154: rotors4
+    400156: uav
+    2100000: lambert3
+    2100002: surfaceShader15
+    2100004: surfaceShader69
+    2300000: coil_7_6
+    2300002: coil_7_6 1
+    2300004: coil_7_6 2
+    2300006: coil_7_6 3
+    2300008: coil_7_6 4
+    2300010: coil_7_6 5
+    2300012: coil_7_6 6
+    2300014: coil_7_6 7
+    2300016: coil_7_6 8
+    2300018: coil_7_6 9
+    2300020: pCylinder10
+    2300022: pCylinder11
+    3300000: coil_7_6
+    3300002: coil_7_6 1
+    3300004: coil_7_6 2
+    3300006: coil_7_6 3
+    3300008: coil_7_6 4
+    3300010: coil_7_6 5
+    3300012: coil_7_6 6
+    3300014: coil_7_6 7
+    3300016: coil_7_6 8
+    3300018: coil_7_6 9
+    3300020: pCylinder10
+    3300022: pCylinder11
+    4300000: pCylinder11
+    4300002: pCylinder10
+    4300004: coil_7_6
+    4300006: coil_7_6
+    4300008: coil_7_6
+    4300010: coil_7_6
+    4300012: coil_7_6
+    4300014: coil_7_6
+    4300016: coil_7_6
+    4300018: coil_7_6
+    4300020: coil_7_6
+    4300022: coil_7_6
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
