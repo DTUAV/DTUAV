@@ -1,0 +1,12 @@
+float64 b1
+float64 b2
+float64 b3
+float64 b4
+float64 b5
+float64 b6
+float64 b7
+float64 b8
+float64 b9
+float64 wx
+float64 wy
+float64 wz

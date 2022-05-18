@@ -1,0 +1,19 @@
+<launch>
+<node name="dt_network_client1" pkg="local_server_v2" type="local_server_client_node" output="screen">
+<param name="port" value="8080" />
+<param name="ros_pub_topic" value="/from/Server1/data" />
+<param name="ros_sub_topic" value="/to/Server1/data"/>
+<param name="data_recv_rate_hz" value="1000"/>
+<param name="server_ip" value="100.101.155.46"/>
+  </node>
+  <node name="uav_0_msg_pack_center_uav1" pkg="message_pack" type="uav_message_pack_node" output="screen">
+        <param name="SourceID" value="201"/>
+        <param name="TargetID" value="1"/>
+        <param name="IotMessagePubTopic" value="/to/Server1/data"/>
+        <param name="GlobalPositionMessageSubTopic" value="/mavros1/global_position/global"/>
+        <param name="LocalPositionMessageSubTopic" value="/mavros1/local_position/pose"/>
+        <param name="LocalVelocityMessageSubTopic" value="/mavros1/local_position/velocity"/>
+        <param name="UavStateMessageSubTopic" value="/mavros1/state"/>
+        <param name="MessagePubFrequency" value="100"/>
+  </node>
+</launch>

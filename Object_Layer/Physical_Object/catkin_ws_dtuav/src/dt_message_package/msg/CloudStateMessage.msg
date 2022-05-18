@@ -1,0 +1,2 @@
+string connection_state
+string work_state

@@ -1,0 +1,25 @@
+<launch>
+<node name="server_0" pkg="map_wrapper" type="cloud_connection_node" output="screen">
+<param name="product_key" value="a1sPcf9qRHO" />
+<param name="device_name" value="LocalServer_1" />
+<param name="device_secret" value="db1bdb94abbfa68666266dbd12eaa81d"/>
+<param name="iot_pub_topic" value="/a1sPcf9qRHO/LocalServer_1/user/LocalServer_1_Pub"/>
+<param name="iot_sub_topic" value="/a1sPcf9qRHO/LocalServer_1/user/LocalServer_1_Sub"/>
+<param name="ros_sub_topic" value="/server/msg_to_iot"/>
+<param name="ros_pub_topic" value="/server/msg_from_iot"/>
+<param name="ros_iot_state_pub_topic" value="/server/iot_state"/>
+<param name="object_name" value="LocalServer_1"/>
+  </node>
+
+<node name="map_wrapper_node" pkg="map_wrapper" type="map_wrapper_node" output="screen">
+     <param name="qgc_port" value="14550" />
+     <param name="local_port" value="14551" />
+     <param name="ros_pub_topic" value="/map_wrapper/msg/from/map"/>
+     <param name="ros_sub_topic" value="/map_wrapper/msg/to/map"/>
+     <param name="server_ip" value="127.0.0.1"/>
+     <param name="data_recv_rate_hz" value="50"/>
+</node>
+
+
+
+</launch>

@@ -1,0 +1,12 @@
+<launch>
+<node name="uav_0_msg_pack_center_uav" pkg="message_pack" type="uav_message_pack_node" output="screen">
+      <param name="SourceID" value="1"/>
+      <param name="TargetID" value="201"/>
+      <param name="IotMessagePubTopic" value="/r_uav_0/msg_to_iot"/>
+      <param name="GlobalPositionMessageSubTopic" value="/mavros/global_position/global"/>
+      <param name="LocalPositionMessageSubTopic" value="/mavros/local_position/pose"/>
+      <param name="LocalVelocityMessageSubTopic" value="/mavros/local_position/velocity"/>
+      <param name="UavStateMessageSubTopic" value="/mavros/state"/>
+      <param name="MessagePubFrequency" value="10"/>
+</node>
+</launch>

@@ -1,0 +1,1447 @@
+fileFormatVersion: 2
+guid: b8c00d0b671eabd4a92ab96d6db13ba6
+ModelImporter:
+  serializedVersion: 24
+  fileIDToRecycleName:
+    100000: camera
+    100002: camera_batch
+    100004: group
+    100006: group 1
+    100008: group 2
+    100010: group 3
+    100012: group10
+    100014: group10 1
+    100016: group10 2
+    100018: group10 3
+    100020: group11
+    100022: group11 1
+    100024: group11 2
+    100026: group11 3
+    100028: group12
+    100030: group12 1
+    100032: group12 2
+    100034: group12 3
+    100036: group13
+    100038: group13 1
+    100040: group13 2
+    100042: group13 3
+    100044: group4
+    100046: group5
+    100048: group5 1
+    100050: group5 10
+    100052: group5 11
+    100054: group5 12
+    100056: group5 13
+    100058: group5 14
+    100060: group5 15
+    100062: group5 16
+    100064: group5 17
+    100066: group5 18
+    100068: group5 19
+    100070: group5 2
+    100072: group5 20
+    100074: group5 21
+    100076: group5 22
+    100078: group5 23
+    100080: group5 3
+    100082: group5 4
+    100084: group5 5
+    100086: group5 6
+    100088: group5 7
+    100090: group5 8
+    100092: group5 9
+    100094: group6
+    100096: group6 1
+    100098: group6 10
+    100100: group6 11
+    100102: group6 12
+    100104: group6 13
+    100106: group6 14
+    100108: group6 15
+    100110: group6 16
+    100112: group6 17
+    100114: group6 18
+    100116: group6 19
+    100118: group6 2
+    100120: group6 20
+    100122: group6 21
+    100124: group6 22
+    100126: group6 23
+    100128: group6 3
+    100130: group6 4
+    100132: group6 5
+    100134: group6 6
+    100136: group6 7
+    100138: group6 8
+    100140: group6 9
+    100142: group7
+    100144: group7 1
+    100146: group7 10
+    100148: group7 11
+    100150: group7 12
+    100152: group7 13
+    100154: group7 14
+    100156: group7 15
+    100158: group7 16
+    100160: group7 17
+    100162: group7 18
+    100164: group7 19
+    100166: group7 2
+    100168: group7 20
+    100170: group7 21
+    100172: group7 22
+    100174: group7 23
+    100176: group7 3
+    100178: group7 4
+    100180: group7 5
+    100182: group7 6
+    100184: group7 7
+    100186: group7 8
+    100188: group7 9
+    100190: group8
+    100192: group8 1
+    100194: group8 2
+    100196: group8 3
+    100198: group9
+    100200: group9 1
+    100202: group9 2
+    100204: group9 3
+    100206: laser
+    100208: laser_batch
+    100210: laser_main
+    100212: left
+    100214: motor
+    100216: motor1
+    100218: motor2
+    100220: motor3
+    100222: motor4
+    100224: pasted__pCone1
+    100226: pasted__pCone1 1
+    100228: pasted__pCone1 2
+    100230: pasted__pCone1 3
+    100232: pasted__pCylinder12
+    100234: pasted__pCylinder12 1
+    100236: pasted__pCylinder12 10
+    100238: pasted__pCylinder12 11
+    100240: pasted__pCylinder12 12
+    100242: pasted__pCylinder12 13
+    100244: pasted__pCylinder12 14
+    100246: pasted__pCylinder12 15
+    100248: pasted__pCylinder12 16
+    100250: pasted__pCylinder12 17
+    100252: pasted__pCylinder12 18
+    100254: pasted__pCylinder12 19
+    100256: pasted__pCylinder12 2
+    100258: pasted__pCylinder12 20
+    100260: pasted__pCylinder12 21
+    100262: pasted__pCylinder12 22
+    100264: pasted__pCylinder12 23
+    100266: pasted__pCylinder12 3
+    100268: pasted__pCylinder12 4
+    100270: pasted__pCylinder12 5
+    100272: pasted__pCylinder12 6
+    100274: pasted__pCylinder12 7
+    100276: pasted__pCylinder12 8
+    100278: pasted__pCylinder12 9
+    100280: pasted__pCylinder8
+    100282: pasted__pCylinder8 1
+    100284: pasted__pCylinder8 2
+    100286: pasted__pCylinder8 3
+    100288: pasted__pCylinder9
+    100290: pasted__pCylinder9 1
+    100292: pasted__pCylinder9 2
+    100294: pasted__pCylinder9 3
+    100296: pasted__polySurface1
+    100298: pasted__polySurface1 1
+    100300: pasted__polySurface1 2
+    100302: pasted__polySurface1 3
+    100304: pasted__polySurface2
+    100306: pasted__polySurface2 1
+    100308: pasted__polySurface2 2
+    100310: pasted__polySurface2 3
+    100312: pasted__polySurface3
+    100314: pasted__polySurface3 1
+    100316: pasted__polySurface3 2
+    100318: pasted__polySurface3 3
+    100320: pasted__pTorus2
+    100322: pasted__pTorus2 1
+    100324: pasted__pTorus2 10
+    100326: pasted__pTorus2 11
+    100328: pasted__pTorus2 12
+    100330: pasted__pTorus2 13
+    100332: pasted__pTorus2 14
+    100334: pasted__pTorus2 15
+    100336: pasted__pTorus2 16
+    100338: pasted__pTorus2 17
+    100340: pasted__pTorus2 18
+    100342: pasted__pTorus2 19
+    100344: pasted__pTorus2 2
+    100346: pasted__pTorus2 20
+    100348: pasted__pTorus2 21
+    100350: pasted__pTorus2 22
+    100352: pasted__pTorus2 23
+    100354: pasted__pTorus2 3
+    100356: pasted__pTorus2 4
+    100358: pasted__pTorus2 5
+    100360: pasted__pTorus2 6
+    100362: pasted__pTorus2 7
+    100364: pasted__pTorus2 8
+    100366: pasted__pTorus2 9
+    100368: pasted__transform7
+    100370: pasted__transform7 1
+    100372: pasted__transform7 2
+    100374: pasted__transform7 3
+    100376: pasted__transform8
+    100378: pasted__transform8 1
+    100380: pasted__transform8 2
+    100382: pasted__transform8 3
+    100384: pasted__transform9
+    100386: pasted__transform9 1
+    100388: pasted__transform9 2
+    100390: pasted__transform9 3
+    100392: pCylinder12
+    100394: pCylinder12 1
+    100396: pCylinder12 10
+    100398: pCylinder12 11
+    100400: pCylinder12 12
+    100402: pCylinder12 13
+    100404: pCylinder12 14
+    100406: pCylinder12 15
+    100408: pCylinder12 16
+    100410: pCylinder12 17
+    100412: pCylinder12 18
+    100414: pCylinder12 19
+    100416: pCylinder12 2
+    100418: pCylinder12 20
+    100420: pCylinder12 21
+    100422: pCylinder12 22
+    100424: pCylinder12 23
+    100426: pCylinder12 3
+    100428: pCylinder12 4
+    100430: pCylinder12 5
+    100432: pCylinder12 6
+    100434: pCylinder12 7
+    100436: pCylinder12 8
+    100438: pCylinder12 9
+    100440: propellor
+    100442: propellor 1
+    100444: propellor 2
+    100446: propellor 3
+    100448: pTorus1
+    100450: pTorus1 1
+    100452: pTorus1 10
+    100454: pTorus1 11
+    100456: pTorus1 12
+    100458: pTorus1 13
+    100460: pTorus1 14
+    100462: pTorus1 15
+    100464: pTorus1 16
+    100466: pTorus1 17
+    100468: pTorus1 18
+    100470: pTorus1 19
+    100472: pTorus1 2
+    100474: pTorus1 20
+    100476: pTorus1 21
+    100478: pTorus1 22
+    100480: pTorus1 23
+    100482: pTorus1 3
+    100484: pTorus1 4
+    100486: pTorus1 5
+    100488: pTorus1 6
+    100490: pTorus1 7
+    100492: pTorus1 8
+    100494: pTorus1 9
+    100496: pTorus2
+    100498: pTorus2 1
+    100500: pTorus2 10
+    100502: pTorus2 11
+    100504: pTorus2 12
+    100506: pTorus2 13
+    100508: pTorus2 14
+    100510: pTorus2 15
+    100512: pTorus2 16
+    100514: pTorus2 17
+    100516: pTorus2 18
+    100518: pTorus2 19
+    100520: pTorus2 2
+    100522: pTorus2 20
+    100524: pTorus2 21
+    100526: pTorus2 22
+    100528: pTorus2 23
+    100530: pTorus2 3
+    100532: pTorus2 4
+    100534: pTorus2 5
+    100536: pTorus2 6
+    100538: pTorus2 7
+    100540: pTorus2 8
+    100542: pTorus2 9
+    100544: pTorus3
+    100546: pTorus3 1
+    100548: pTorus3 10
+    100550: pTorus3 11
+    100552: pTorus3 12
+    100554: pTorus3 13
+    100556: pTorus3 14
+    100558: pTorus3 15
+    100560: pTorus3 16
+    100562: pTorus3 17
+    100564: pTorus3 18
+    100566: pTorus3 19
+    100568: pTorus3 2
+    100570: pTorus3 20
+    100572: pTorus3 21
+    100574: pTorus3 22
+    100576: pTorus3 23
+    100578: pTorus3 3
+    100580: pTorus3 4
+    100582: pTorus3 5
+    100584: pTorus3 6
+    100586: pTorus3 7
+    100588: pTorus3 8
+    100590: pTorus3 9
+    100592: pTorus4
+    100594: pTorus4 1
+    100596: pTorus4 10
+    100598: pTorus4 11
+    100600: pTorus4 12
+    100602: pTorus4 13
+    100604: pTorus4 14
+    100606: pTorus4 15
+    100608: pTorus4 16
+    100610: pTorus4 17
+    100612: pTorus4 18
+    100614: pTorus4 19
+    100616: pTorus4 2
+    100618: pTorus4 20
+    100620: pTorus4 21
+    100622: pTorus4 22
+    100624: pTorus4 23
+    100626: pTorus4 3
+    100628: pTorus4 4
+    100630: pTorus4 5
+    100632: pTorus4 6
+    100634: pTorus4 7
+    100636: pTorus4 8
+    100638: pTorus4 9
+    100640: pTorus5
+    100642: pTorus5 1
+    100644: pTorus5 10
+    100646: pTorus5 11
+    100648: pTorus5 12
+    100650: pTorus5 13
+    100652: pTorus5 14
+    100654: pTorus5 15
+    100656: pTorus5 16
+    100658: pTorus5 17
+    100660: pTorus5 18
+    100662: pTorus5 19
+    100664: pTorus5 2
+    100666: pTorus5 20
+    100668: pTorus5 21
+    100670: pTorus5 22
+    100672: pTorus5 23
+    100674: pTorus5 3
+    100676: pTorus5 4
+    100678: pTorus5 5
+    100680: pTorus5 6
+    100682: pTorus5 7
+    100684: pTorus5 8
+    100686: pTorus5 9
+    100688: right
+    100690: transform10
+    100692: //RootNode
+    100694: uav_batch
+    400000: camera
+    400002: camera_batch
+    400004: group
+    400006: group 1
+    400008: group 2
+    400010: group 3
+    400012: group10
+    400014: group10 1
+    400016: group10 2
+    400018: group10 3
+    400020: group11
+    400022: group11 1
+    400024: group11 2
+    400026: group11 3
+    400028: group12
+    400030: group12 1
+    400032: group12 2
+    400034: group12 3
+    400036: group13
+    400038: group13 1
+    400040: group13 2
+    400042: group13 3
+    400044: group4
+    400046: group5
+    400048: group5 1
+    400050: group5 10
+    400052: group5 11
+    400054: group5 12
+    400056: group5 13
+    400058: group5 14
+    400060: group5 15
+    400062: group5 16
+    400064: group5 17
+    400066: group5 18
+    400068: group5 19
+    400070: group5 2
+    400072: group5 20
+    400074: group5 21
+    400076: group5 22
+    400078: group5 23
+    400080: group5 3
+    400082: group5 4
+    400084: group5 5
+    400086: group5 6
+    400088: group5 7
+    400090: group5 8
+    400092: group5 9
+    400094: group6
+    400096: group6 1
+    400098: group6 10
+    400100: group6 11
+    400102: group6 12
+    400104: group6 13
+    400106: group6 14
+    400108: group6 15
+    400110: group6 16
+    400112: group6 17
+    400114: group6 18
+    400116: group6 19
+    400118: group6 2
+    400120: group6 20
+    400122: group6 21
+    400124: group6 22
+    400126: group6 23
+    400128: group6 3
+    400130: group6 4
+    400132: group6 5
+    400134: group6 6
+    400136: group6 7
+    400138: group6 8
+    400140: group6 9
+    400142: group7
+    400144: group7 1
+    400146: group7 10
+    400148: group7 11
+    400150: group7 12
+    400152: group7 13
+    400154: group7 14
+    400156: group7 15
+    400158: group7 16
+    400160: group7 17
+    400162: group7 18
+    400164: group7 19
+    400166: group7 2
+    400168: group7 20
+    400170: group7 21
+    400172: group7 22
+    400174: group7 23
+    400176: group7 3
+    400178: group7 4
+    400180: group7 5
+    400182: group7 6
+    400184: group7 7
+    400186: group7 8
+    400188: group7 9
+    400190: group8
+    400192: group8 1
+    400194: group8 2
+    400196: group8 3
+    400198: group9
+    400200: group9 1
+    400202: group9 2
+    400204: group9 3
+    400206: laser
+    400208: laser_batch
+    400210: laser_main
+    400212: left
+    400214: motor
+    400216: motor1
+    400218: motor2
+    400220: motor3
+    400222: motor4
+    400224: pasted__pCone1
+    400226: pasted__pCone1 1
+    400228: pasted__pCone1 2
+    400230: pasted__pCone1 3
+    400232: pasted__pCylinder12
+    400234: pasted__pCylinder12 1
+    400236: pasted__pCylinder12 10
+    400238: pasted__pCylinder12 11
+    400240: pasted__pCylinder12 12
+    400242: pasted__pCylinder12 13
+    400244: pasted__pCylinder12 14
+    400246: pasted__pCylinder12 15
+    400248: pasted__pCylinder12 16
+    400250: pasted__pCylinder12 17
+    400252: pasted__pCylinder12 18
+    400254: pasted__pCylinder12 19
+    400256: pasted__pCylinder12 2
+    400258: pasted__pCylinder12 20
+    400260: pasted__pCylinder12 21
+    400262: pasted__pCylinder12 22
+    400264: pasted__pCylinder12 23
+    400266: pasted__pCylinder12 3
+    400268: pasted__pCylinder12 4
+    400270: pasted__pCylinder12 5
+    400272: pasted__pCylinder12 6
+    400274: pasted__pCylinder12 7
+    400276: pasted__pCylinder12 8
+    400278: pasted__pCylinder12 9
+    400280: pasted__pCylinder8
+    400282: pasted__pCylinder8 1
+    400284: pasted__pCylinder8 2
+    400286: pasted__pCylinder8 3
+    400288: pasted__pCylinder9
+    400290: pasted__pCylinder9 1
+    400292: pasted__pCylinder9 2
+    400294: pasted__pCylinder9 3
+    400296: pasted__polySurface1
+    400298: pasted__polySurface1 1
+    400300: pasted__polySurface1 2
+    400302: pasted__polySurface1 3
+    400304: pasted__polySurface2
+    400306: pasted__polySurface2 1
+    400308: pasted__polySurface2 2
+    400310: pasted__polySurface2 3
+    400312: pasted__polySurface3
+    400314: pasted__polySurface3 1
+    400316: pasted__polySurface3 2
+    400318: pasted__polySurface3 3
+    400320: pasted__pTorus2
+    400322: pasted__pTorus2 1
+    400324: pasted__pTorus2 10
+    400326: pasted__pTorus2 11
+    400328: pasted__pTorus2 12
+    400330: pasted__pTorus2 13
+    400332: pasted__pTorus2 14
+    400334: pasted__pTorus2 15
+    400336: pasted__pTorus2 16
+    400338: pasted__pTorus2 17
+    400340: pasted__pTorus2 18
+    400342: pasted__pTorus2 19
+    400344: pasted__pTorus2 2
+    400346: pasted__pTorus2 20
+    400348: pasted__pTorus2 21
+    400350: pasted__pTorus2 22
+    400352: pasted__pTorus2 23
+    400354: pasted__pTorus2 3
+    400356: pasted__pTorus2 4
+    400358: pasted__pTorus2 5
+    400360: pasted__pTorus2 6
+    400362: pasted__pTorus2 7
+    400364: pasted__pTorus2 8
+    400366: pasted__pTorus2 9
+    400368: pasted__transform7
+    400370: pasted__transform7 1
+    400372: pasted__transform7 2
+    400374: pasted__transform7 3
+    400376: pasted__transform8
+    400378: pasted__transform8 1
+    400380: pasted__transform8 2
+    400382: pasted__transform8 3
+    400384: pasted__transform9
+    400386: pasted__transform9 1
+    400388: pasted__transform9 2
+    400390: pasted__transform9 3
+    400392: pCylinder12
+    400394: pCylinder12 1
+    400396: pCylinder12 10
+    400398: pCylinder12 11
+    400400: pCylinder12 12
+    400402: pCylinder12 13
+    400404: pCylinder12 14
+    400406: pCylinder12 15
+    400408: pCylinder12 16
+    400410: pCylinder12 17
+    400412: pCylinder12 18
+    400414: pCylinder12 19
+    400416: pCylinder12 2
+    400418: pCylinder12 20
+    400420: pCylinder12 21
+    400422: pCylinder12 22
+    400424: pCylinder12 23
+    400426: pCylinder12 3
+    400428: pCylinder12 4
+    400430: pCylinder12 5
+    400432: pCylinder12 6
+    400434: pCylinder12 7
+    400436: pCylinder12 8
+    400438: pCylinder12 9
+    400440: propellor
+    400442: propellor 1
+    400444: propellor 2
+    400446: propellor 3
+    400448: pTorus1
+    400450: pTorus1 1
+    400452: pTorus1 10
+    400454: pTorus1 11
+    400456: pTorus1 12
+    400458: pTorus1 13
+    400460: pTorus1 14
+    400462: pTorus1 15
+    400464: pTorus1 16
+    400466: pTorus1 17
+    400468: pTorus1 18
+    400470: pTorus1 19
+    400472: pTorus1 2
+    400474: pTorus1 20
+    400476: pTorus1 21
+    400478: pTorus1 22
+    400480: pTorus1 23
+    400482: pTorus1 3
+    400484: pTorus1 4
+    400486: pTorus1 5
+    400488: pTorus1 6
+    400490: pTorus1 7
+    400492: pTorus1 8
+    400494: pTorus1 9
+    400496: pTorus2
+    400498: pTorus2 1
+    400500: pTorus2 10
+    400502: pTorus2 11
+    400504: pTorus2 12
+    400506: pTorus2 13
+    400508: pTorus2 14
+    400510: pTorus2 15
+    400512: pTorus2 16
+    400514: pTorus2 17
+    400516: pTorus2 18
+    400518: pTorus2 19
+    400520: pTorus2 2
+    400522: pTorus2 20
+    400524: pTorus2 21
+    400526: pTorus2 22
+    400528: pTorus2 23
+    400530: pTorus2 3
+    400532: pTorus2 4
+    400534: pTorus2 5
+    400536: pTorus2 6
+    400538: pTorus2 7
+    400540: pTorus2 8
+    400542: pTorus2 9
+    400544: pTorus3
+    400546: pTorus3 1
+    400548: pTorus3 10
+    400550: pTorus3 11
+    400552: pTorus3 12
+    400554: pTorus3 13
+    400556: pTorus3 14
+    400558: pTorus3 15
+    400560: pTorus3 16
+    400562: pTorus3 17
+    400564: pTorus3 18
+    400566: pTorus3 19
+    400568: pTorus3 2
+    400570: pTorus3 20
+    400572: pTorus3 21
+    400574: pTorus3 22
+    400576: pTorus3 23
+    400578: pTorus3 3
+    400580: pTorus3 4
+    400582: pTorus3 5
+    400584: pTorus3 6
+    400586: pTorus3 7
+    400588: pTorus3 8
+    400590: pTorus3 9
+    400592: pTorus4
+    400594: pTorus4 1
+    400596: pTorus4 10
+    400598: pTorus4 11
+    400600: pTorus4 12
+    400602: pTorus4 13
+    400604: pTorus4 14
+    400606: pTorus4 15
+    400608: pTorus4 16
+    400610: pTorus4 17
+    400612: pTorus4 18
+    400614: pTorus4 19
+    400616: pTorus4 2
+    400618: pTorus4 20
+    400620: pTorus4 21
+    400622: pTorus4 22
+    400624: pTorus4 23
+    400626: pTorus4 3
+    400628: pTorus4 4
+    400630: pTorus4 5
+    400632: pTorus4 6
+    400634: pTorus4 7
+    400636: pTorus4 8
+    400638: pTorus4 9
+    400640: pTorus5
+    400642: pTorus5 1
+    400644: pTorus5 10
+    400646: pTorus5 11
+    400648: pTorus5 12
+    400650: pTorus5 13
+    400652: pTorus5 14
+    400654: pTorus5 15
+    400656: pTorus5 16
+    400658: pTorus5 17
+    400660: pTorus5 18
+    400662: pTorus5 19
+    400664: pTorus5 2
+    400666: pTorus5 20
+    400668: pTorus5 21
+    400670: pTorus5 22
+    400672: pTorus5 23
+    400674: pTorus5 3
+    400676: pTorus5 4
+    400678: pTorus5 5
+    400680: pTorus5 6
+    400682: pTorus5 7
+    400684: pTorus5 8
+    400686: pTorus5 9
+    400688: right
+    400690: transform10
+    400692: //RootNode
+    400694: uav_batch
+    2100000: lambert1
+    2100002: surfaceShader24
+    2100004: surfaceShader5
+    2100006: surfaceShader3
+    2100008: surfaceShader4
+    2100010: surfaceShader29
+    2100012: surfaceShader12
+    2100014: pasted__surfaceShader12
+    2100016: surfaceShader18
+    2100018: surfaceShader13
+    2100020: surfaceShader16
+    2100022: surfaceShader14
+    2100024: surfaceShader22
+    2100026: surfaceShader21
+    2100028: surfaceShader15
+    2100030: surfaceShader20
+    2100032: surfaceShader19
+    2300000: camera_batch
+    2300002: laser_batch
+    2300004: laser_main
+    2300006: left
+    2300008: pasted__pCone1
+    2300010: pasted__pCone1 1
+    2300012: pasted__pCone1 2
+    2300014: pasted__pCone1 3
+    2300016: pasted__pCylinder12
+    2300018: pasted__pCylinder12 1
+    2300020: pasted__pCylinder12 10
+    2300022: pasted__pCylinder12 11
+    2300024: pasted__pCylinder12 12
+    2300026: pasted__pCylinder12 13
+    2300028: pasted__pCylinder12 14
+    2300030: pasted__pCylinder12 15
+    2300032: pasted__pCylinder12 16
+    2300034: pasted__pCylinder12 17
+    2300036: pasted__pCylinder12 18
+    2300038: pasted__pCylinder12 19
+    2300040: pasted__pCylinder12 2
+    2300042: pasted__pCylinder12 20
+    2300044: pasted__pCylinder12 21
+    2300046: pasted__pCylinder12 22
+    2300048: pasted__pCylinder12 23
+    2300050: pasted__pCylinder12 3
+    2300052: pasted__pCylinder12 4
+    2300054: pasted__pCylinder12 5
+    2300056: pasted__pCylinder12 6
+    2300058: pasted__pCylinder12 7
+    2300060: pasted__pCylinder12 8
+    2300062: pasted__pCylinder12 9
+    2300064: pasted__pCylinder8
+    2300066: pasted__pCylinder8 1
+    2300068: pasted__pCylinder8 2
+    2300070: pasted__pCylinder8 3
+    2300072: pasted__polySurface1
+    2300074: pasted__polySurface1 1
+    2300076: pasted__polySurface1 2
+    2300078: pasted__polySurface1 3
+    2300080: pasted__pTorus2
+    2300082: pasted__pTorus2 1
+    2300084: pasted__pTorus2 10
+    2300086: pasted__pTorus2 11
+    2300088: pasted__pTorus2 12
+    2300090: pasted__pTorus2 13
+    2300092: pasted__pTorus2 14
+    2300094: pasted__pTorus2 15
+    2300096: pasted__pTorus2 16
+    2300098: pasted__pTorus2 17
+    2300100: pasted__pTorus2 18
+    2300102: pasted__pTorus2 19
+    2300104: pasted__pTorus2 2
+    2300106: pasted__pTorus2 20
+    2300108: pasted__pTorus2 21
+    2300110: pasted__pTorus2 22
+    2300112: pasted__pTorus2 23
+    2300114: pasted__pTorus2 3
+    2300116: pasted__pTorus2 4
+    2300118: pasted__pTorus2 5
+    2300120: pasted__pTorus2 6
+    2300122: pasted__pTorus2 7
+    2300124: pasted__pTorus2 8
+    2300126: pasted__pTorus2 9
+    2300128: pCylinder12
+    2300130: pCylinder12 1
+    2300132: pCylinder12 10
+    2300134: pCylinder12 11
+    2300136: pCylinder12 12
+    2300138: pCylinder12 13
+    2300140: pCylinder12 14
+    2300142: pCylinder12 15
+    2300144: pCylinder12 16
+    2300146: pCylinder12 17
+    2300148: pCylinder12 18
+    2300150: pCylinder12 19
+    2300152: pCylinder12 2
+    2300154: pCylinder12 20
+    2300156: pCylinder12 21
+    2300158: pCylinder12 22
+    2300160: pCylinder12 23
+    2300162: pCylinder12 3
+    2300164: pCylinder12 4
+    2300166: pCylinder12 5
+    2300168: pCylinder12 6
+    2300170: pCylinder12 7
+    2300172: pCylinder12 8
+    2300174: pCylinder12 9
+    2300176: propellor
+    2300178: propellor 1
+    2300180: propellor 2
+    2300182: propellor 3
+    2300184: pTorus1
+    2300186: pTorus1 1
+    2300188: pTorus1 10
+    2300190: pTorus1 11
+    2300192: pTorus1 12
+    2300194: pTorus1 13
+    2300196: pTorus1 14
+    2300198: pTorus1 15
+    2300200: pTorus1 16
+    2300202: pTorus1 17
+    2300204: pTorus1 18
+    2300206: pTorus1 19
+    2300208: pTorus1 2
+    2300210: pTorus1 20
+    2300212: pTorus1 21
+    2300214: pTorus1 22
+    2300216: pTorus1 23
+    2300218: pTorus1 3
+    2300220: pTorus1 4
+    2300222: pTorus1 5
+    2300224: pTorus1 6
+    2300226: pTorus1 7
+    2300228: pTorus1 8
+    2300230: pTorus1 9
+    2300232: pTorus2
+    2300234: pTorus2 1
+    2300236: pTorus2 10
+    2300238: pTorus2 11
+    2300240: pTorus2 12
+    2300242: pTorus2 13
+    2300244: pTorus2 14
+    2300246: pTorus2 15
+    2300248: pTorus2 16
+    2300250: pTorus2 17
+    2300252: pTorus2 18
+    2300254: pTorus2 19
+    2300256: pTorus2 2
+    2300258: pTorus2 20
+    2300260: pTorus2 21
+    2300262: pTorus2 22
+    2300264: pTorus2 23
+    2300266: pTorus2 3
+    2300268: pTorus2 4
+    2300270: pTorus2 5
+    2300272: pTorus2 6
+    2300274: pTorus2 7
+    2300276: pTorus2 8
+    2300278: pTorus2 9
+    2300280: pTorus3
+    2300282: pTorus3 1
+    2300284: pTorus3 10
+    2300286: pTorus3 11
+    2300288: pTorus3 12
+    2300290: pTorus3 13
+    2300292: pTorus3 14
+    2300294: pTorus3 15
+    2300296: pTorus3 16
+    2300298: pTorus3 17
+    2300300: pTorus3 18
+    2300302: pTorus3 19
+    2300304: pTorus3 2
+    2300306: pTorus3 20
+    2300308: pTorus3 21
+    2300310: pTorus3 22
+    2300312: pTorus3 23
+    2300314: pTorus3 3
+    2300316: pTorus3 4
+    2300318: pTorus3 5
+    2300320: pTorus3 6
+    2300322: pTorus3 7
+    2300324: pTorus3 8
+    2300326: pTorus3 9
+    2300328: pTorus4
+    2300330: pTorus4 1
+    2300332: pTorus4 10
+    2300334: pTorus4 11
+    2300336: pTorus4 12
+    2300338: pTorus4 13
+    2300340: pTorus4 14
+    2300342: pTorus4 15
+    2300344: pTorus4 16
+    2300346: pTorus4 17
+    2300348: pTorus4 18
+    2300350: pTorus4 19
+    2300352: pTorus4 2
+    2300354: pTorus4 20
+    2300356: pTorus4 21
+    2300358: pTorus4 22
+    2300360: pTorus4 23
+    2300362: pTorus4 3
+    2300364: pTorus4 4
+    2300366: pTorus4 5
+    2300368: pTorus4 6
+    2300370: pTorus4 7
+    2300372: pTorus4 8
+    2300374: pTorus4 9
+    2300376: pTorus5
+    2300378: pTorus5 1
+    2300380: pTorus5 10
+    2300382: pTorus5 11
+    2300384: pTorus5 12
+    2300386: pTorus5 13
+    2300388: pTorus5 14
+    2300390: pTorus5 15
+    2300392: pTorus5 16
+    2300394: pTorus5 17
+    2300396: pTorus5 18
+    2300398: pTorus5 19
+    2300400: pTorus5 2
+    2300402: pTorus5 20
+    2300404: pTorus5 21
+    2300406: pTorus5 22
+    2300408: pTorus5 23
+    2300410: pTorus5 3
+    2300412: pTorus5 4
+    2300414: pTorus5 5
+    2300416: pTorus5 6
+    2300418: pTorus5 7
+    2300420: pTorus5 8
+    2300422: pTorus5 9
+    2300424: right
+    2300426: uav_batch
+    3300000: camera_batch
+    3300002: laser_batch
+    3300004: laser_main
+    3300006: left
+    3300008: pasted__pCone1
+    3300010: pasted__pCone1 1
+    3300012: pasted__pCone1 2
+    3300014: pasted__pCone1 3
+    3300016: pasted__pCylinder12
+    3300018: pasted__pCylinder12 1
+    3300020: pasted__pCylinder12 10
+    3300022: pasted__pCylinder12 11
+    3300024: pasted__pCylinder12 12
+    3300026: pasted__pCylinder12 13
+    3300028: pasted__pCylinder12 14
+    3300030: pasted__pCylinder12 15
+    3300032: pasted__pCylinder12 16
+    3300034: pasted__pCylinder12 17
+    3300036: pasted__pCylinder12 18
+    3300038: pasted__pCylinder12 19
+    3300040: pasted__pCylinder12 2
+    3300042: pasted__pCylinder12 20
+    3300044: pasted__pCylinder12 21
+    3300046: pasted__pCylinder12 22
+    3300048: pasted__pCylinder12 23
+    3300050: pasted__pCylinder12 3
+    3300052: pasted__pCylinder12 4
+    3300054: pasted__pCylinder12 5
+    3300056: pasted__pCylinder12 6
+    3300058: pasted__pCylinder12 7
+    3300060: pasted__pCylinder12 8
+    3300062: pasted__pCylinder12 9
+    3300064: pasted__pCylinder8
+    3300066: pasted__pCylinder8 1
+    3300068: pasted__pCylinder8 2
+    3300070: pasted__pCylinder8 3
+    3300072: pasted__polySurface1
+    3300074: pasted__polySurface1 1
+    3300076: pasted__polySurface1 2
+    3300078: pasted__polySurface1 3
+    3300080: pasted__pTorus2
+    3300082: pasted__pTorus2 1
+    3300084: pasted__pTorus2 10
+    3300086: pasted__pTorus2 11
+    3300088: pasted__pTorus2 12
+    3300090: pasted__pTorus2 13
+    3300092: pasted__pTorus2 14
+    3300094: pasted__pTorus2 15
+    3300096: pasted__pTorus2 16
+    3300098: pasted__pTorus2 17
+    3300100: pasted__pTorus2 18
+    3300102: pasted__pTorus2 19
+    3300104: pasted__pTorus2 2
+    3300106: pasted__pTorus2 20
+    3300108: pasted__pTorus2 21
+    3300110: pasted__pTorus2 22
+    3300112: pasted__pTorus2 23
+    3300114: pasted__pTorus2 3
+    3300116: pasted__pTorus2 4
+    3300118: pasted__pTorus2 5
+    3300120: pasted__pTorus2 6
+    3300122: pasted__pTorus2 7
+    3300124: pasted__pTorus2 8
+    3300126: pasted__pTorus2 9
+    3300128: pCylinder12
+    3300130: pCylinder12 1
+    3300132: pCylinder12 10
+    3300134: pCylinder12 11
+    3300136: pCylinder12 12
+    3300138: pCylinder12 13
+    3300140: pCylinder12 14
+    3300142: pCylinder12 15
+    3300144: pCylinder12 16
+    3300146: pCylinder12 17
+    3300148: pCylinder12 18
+    3300150: pCylinder12 19
+    3300152: pCylinder12 2
+    3300154: pCylinder12 20
+    3300156: pCylinder12 21
+    3300158: pCylinder12 22
+    3300160: pCylinder12 23
+    3300162: pCylinder12 3
+    3300164: pCylinder12 4
+    3300166: pCylinder12 5
+    3300168: pCylinder12 6
+    3300170: pCylinder12 7
+    3300172: pCylinder12 8
+    3300174: pCylinder12 9
+    3300176: propellor
+    3300178: propellor 1
+    3300180: propellor 2
+    3300182: propellor 3
+    3300184: pTorus1
+    3300186: pTorus1 1
+    3300188: pTorus1 10
+    3300190: pTorus1 11
+    3300192: pTorus1 12
+    3300194: pTorus1 13
+    3300196: pTorus1 14
+    3300198: pTorus1 15
+    3300200: pTorus1 16
+    3300202: pTorus1 17
+    3300204: pTorus1 18
+    3300206: pTorus1 19
+    3300208: pTorus1 2
+    3300210: pTorus1 20
+    3300212: pTorus1 21
+    3300214: pTorus1 22
+    3300216: pTorus1 23
+    3300218: pTorus1 3
+    3300220: pTorus1 4
+    3300222: pTorus1 5
+    3300224: pTorus1 6
+    3300226: pTorus1 7
+    3300228: pTorus1 8
+    3300230: pTorus1 9
+    3300232: pTorus2
+    3300234: pTorus2 1
+    3300236: pTorus2 10
+    3300238: pTorus2 11
+    3300240: pTorus2 12
+    3300242: pTorus2 13
+    3300244: pTorus2 14
+    3300246: pTorus2 15
+    3300248: pTorus2 16
+    3300250: pTorus2 17
+    3300252: pTorus2 18
+    3300254: pTorus2 19
+    3300256: pTorus2 2
+    3300258: pTorus2 20
+    3300260: pTorus2 21
+    3300262: pTorus2 22
+    3300264: pTorus2 23
+    3300266: pTorus2 3
+    3300268: pTorus2 4
+    3300270: pTorus2 5
+    3300272: pTorus2 6
+    3300274: pTorus2 7
+    3300276: pTorus2 8
+    3300278: pTorus2 9
+    3300280: pTorus3
+    3300282: pTorus3 1
+    3300284: pTorus3 10
+    3300286: pTorus3 11
+    3300288: pTorus3 12
+    3300290: pTorus3 13
+    3300292: pTorus3 14
+    3300294: pTorus3 15
+    3300296: pTorus3 16
+    3300298: pTorus3 17
+    3300300: pTorus3 18
+    3300302: pTorus3 19
+    3300304: pTorus3 2
+    3300306: pTorus3 20
+    3300308: pTorus3 21
+    3300310: pTorus3 22
+    3300312: pTorus3 23
+    3300314: pTorus3 3
+    3300316: pTorus3 4
+    3300318: pTorus3 5
+    3300320: pTorus3 6
+    3300322: pTorus3 7
+    3300324: pTorus3 8
+    3300326: pTorus3 9
+    3300328: pTorus4
+    3300330: pTorus4 1
+    3300332: pTorus4 10
+    3300334: pTorus4 11
+    3300336: pTorus4 12
+    3300338: pTorus4 13
+    3300340: pTorus4 14
+    3300342: pTorus4 15
+    3300344: pTorus4 16
+    3300346: pTorus4 17
+    3300348: pTorus4 18
+    3300350: pTorus4 19
+    3300352: pTorus4 2
+    3300354: pTorus4 20
+    3300356: pTorus4 21
+    3300358: pTorus4 22
+    3300360: pTorus4 23
+    3300362: pTorus4 3
+    3300364: pTorus4 4
+    3300366: pTorus4 5
+    3300368: pTorus4 6
+    3300370: pTorus4 7
+    3300372: pTorus4 8
+    3300374: pTorus4 9
+    3300376: pTorus5
+    3300378: pTorus5 1
+    3300380: pTorus5 10
+    3300382: pTorus5 11
+    3300384: pTorus5 12
+    3300386: pTorus5 13
+    3300388: pTorus5 14
+    3300390: pTorus5 15
+    3300392: pTorus5 16
+    3300394: pTorus5 17
+    3300396: pTorus5 18
+    3300398: pTorus5 19
+    3300400: pTorus5 2
+    3300402: pTorus5 20
+    3300404: pTorus5 21
+    3300406: pTorus5 22
+    3300408: pTorus5 23
+    3300410: pTorus5 3
+    3300412: pTorus5 4
+    3300414: pTorus5 5
+    3300416: pTorus5 6
+    3300418: pTorus5 7
+    3300420: pTorus5 8
+    3300422: pTorus5 9
+    3300424: right
+    3300426: uav_batch
+    4300000: uav_batch
+    4300002: laser_main
+    4300004: laser_batch
+    4300006: right
+    4300008: left
+    4300010: camera_batch
+    4300012: pasted__pCylinder12
+    4300014: pTorus3
+    4300016: pTorus4
+    4300018: pTorus5
+    4300020: pasted__pTorus2
+    4300022: pTorus2
+    4300024: pCylinder12
+    4300026: pTorus1
+    4300028: pasted__pCylinder12
+    4300030: pTorus3
+    4300032: pTorus4
+    4300034: pTorus5
+    4300036: pasted__pTorus2
+    4300038: pTorus2
+    4300040: pCylinder12
+    4300042: pTorus1
+    4300044: pasted__pCylinder12
+    4300046: pTorus3
+    4300048: pTorus4
+    4300050: pTorus5
+    4300052: pasted__pTorus2
+    4300054: pTorus2
+    4300056: pCylinder12
+    4300058: pTorus1
+    4300060: pasted__pCylinder12
+    4300062: pTorus3
+    4300064: pTorus4
+    4300066: pTorus5
+    4300068: pasted__pTorus2
+    4300070: pTorus2
+    4300072: pCylinder12
+    4300074: pTorus1
+    4300076: pasted__pCylinder12
+    4300078: pTorus3
+    4300080: pTorus4
+    4300082: pTorus5
+    4300084: pasted__pTorus2
+    4300086: pTorus2
+    4300088: pCylinder12
+    4300090: pTorus1
+    4300092: pasted__pCylinder12
+    4300094: pTorus3
+    4300096: pTorus4
+    4300098: pTorus5
+    4300100: pasted__pTorus2
+    4300102: pTorus2
+    4300104: pCylinder12
+    4300106: pTorus1
+    4300108: pasted__pCylinder8
+    4300110: pasted__polySurface1
+    4300112: propellor
+    4300114: pasted__pCone1
+    4300116: pasted__pCylinder12
+    4300118: pTorus3
+    4300120: pTorus4
+    4300122: pTorus5
+    4300124: pasted__pTorus2
+    4300126: pTorus2
+    4300128: pCylinder12
+    4300130: pTorus1
+    4300132: pasted__pCylinder12
+    4300134: pTorus3
+    4300136: pTorus4
+    4300138: pTorus5
+    4300140: pasted__pTorus2
+    4300142: pTorus2
+    4300144: pCylinder12
+    4300146: pTorus1
+    4300148: pasted__pCylinder12
+    4300150: pTorus3
+    4300152: pTorus4
+    4300154: pTorus5
+    4300156: pasted__pTorus2
+    4300158: pTorus2
+    4300160: pCylinder12
+    4300162: pTorus1
+    4300164: pasted__pCylinder12
+    4300166: pTorus3
+    4300168: pTorus4
+    4300170: pTorus5
+    4300172: pasted__pTorus2
+    4300174: pTorus2
+    4300176: pCylinder12
+    4300178: pTorus1
+    4300180: pasted__pCylinder12
+    4300182: pTorus3
+    4300184: pTorus4
+    4300186: pTorus5
+    4300188: pasted__pTorus2
+    4300190: pTorus2
+    4300192: pCylinder12
+    4300194: pTorus1
+    4300196: pasted__pCylinder12
+    4300198: pTorus3
+    4300200: pTorus4
+    4300202: pTorus5
+    4300204: pasted__pTorus2
+    4300206: pTorus2
+    4300208: pCylinder12
+    4300210: pTorus1
+    4300212: pasted__pCylinder8
+    4300214: pasted__polySurface1
+    4300216: propellor
+    4300218: pasted__pCone1
+    4300220: pasted__pCylinder12
+    4300222: pTorus3
+    4300224: pTorus4
+    4300226: pTorus5
+    4300228: pasted__pTorus2
+    4300230: pTorus2
+    4300232: pCylinder12
+    4300234: pTorus1
+    4300236: pasted__pCylinder12
+    4300238: pTorus3
+    4300240: pTorus4
+    4300242: pTorus5
+    4300244: pasted__pTorus2
+    4300246: pTorus2
+    4300248: pCylinder12
+    4300250: pTorus1
+    4300252: pasted__pCylinder12
+    4300254: pTorus3
+    4300256: pTorus4
+    4300258: pTorus5
+    4300260: pasted__pTorus2
+    4300262: pTorus2
+    4300264: pCylinder12
+    4300266: pTorus1
+    4300268: pasted__pCylinder12
+    4300270: pTorus3
+    4300272: pTorus4
+    4300274: pTorus5
+    4300276: pasted__pTorus2
+    4300278: pTorus2
+    4300280: pCylinder12
+    4300282: pTorus1
+    4300284: pasted__pCylinder12
+    4300286: pTorus3
+    4300288: pTorus4
+    4300290: pTorus5
+    4300292: pasted__pTorus2
+    4300294: pTorus2
+    4300296: pCylinder12
+    4300298: pTorus1
+    4300300: pasted__pCylinder12
+    4300302: pTorus3
+    4300304: pTorus4
+    4300306: pTorus5
+    4300308: pasted__pTorus2
+    4300310: pTorus2
+    4300312: pCylinder12
+    4300314: pTorus1
+    4300316: pasted__pCylinder8
+    4300318: pasted__polySurface1
+    4300320: propellor
+    4300322: pasted__pCone1
+    4300324: pasted__pCylinder12
+    4300326: pTorus3
+    4300328: pTorus4
+    4300330: pTorus5
+    4300332: pasted__pTorus2
+    4300334: pTorus2
+    4300336: pCylinder12
+    4300338: pTorus1
+    4300340: pasted__pCylinder12
+    4300342: pTorus3
+    4300344: pTorus4
+    4300346: pTorus5
+    4300348: pasted__pTorus2
+    4300350: pTorus2
+    4300352: pCylinder12
+    4300354: pTorus1
+    4300356: pasted__pCylinder12
+    4300358: pTorus3
+    4300360: pTorus4
+    4300362: pTorus5
+    4300364: pasted__pTorus2
+    4300366: pTorus2
+    4300368: pCylinder12
+    4300370: pTorus1
+    4300372: pasted__pCylinder12
+    4300374: pTorus3
+    4300376: pTorus4
+    4300378: pTorus5
+    4300380: pasted__pTorus2
+    4300382: pTorus2
+    4300384: pCylinder12
+    4300386: pTorus1
+    4300388: pasted__pCylinder12
+    4300390: pTorus3
+    4300392: pTorus4
+    4300394: pTorus5
+    4300396: pasted__pTorus2
+    4300398: pTorus2
+    4300400: pCylinder12
+    4300402: pTorus1
+    4300404: pasted__pCylinder12
+    4300406: pTorus3
+    4300408: pTorus4
+    4300410: pTorus5
+    4300412: pasted__pTorus2
+    4300414: pTorus2
+    4300416: pCylinder12
+    4300418: pTorus1
+    4300420: pasted__pCylinder8
+    4300422: pasted__polySurface1
+    4300424: propellor
+    4300426: pasted__pCone1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,7 @@
+<launch>
+<node name="uav_msg_unpack_center" pkg="message_unpack" type="uav_message_unpack" output="screen">
+      <param name="IotMessageSubTopic" value="/r_uav_0/msg_from_iot"/>
+      <param name="RefPoseMessageTopic" value="RefPoseToUav0"/>
+      <param name="RefVelocityMessageTopic" value="RefVelocityToUav0"/>
+  </node>
+</launch>

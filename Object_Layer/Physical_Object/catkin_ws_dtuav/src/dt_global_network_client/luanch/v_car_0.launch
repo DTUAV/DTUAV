@@ -1,0 +1,13 @@
+<launch>
+<node name="v_car_0" pkg="iot_connection" type="iot_connection_node" output="screen">
+    <param name="product_key" value="a1GcqS5WFte" />
+    <param name="device_name" value="V_CAR_0" />
+    <param name="device_secret" value="d0ad4addb490847adb03fe19af6ac8c3"/>
+    <param name="iot_pub_topic" value="/a1GcqS5WFte/V_CAR_0/user/V_CAR_0_PUB"/>
+    <param name="iot_sub_topic" value="/a1GcqS5WFte/V_CAR_0/user/V_CAR_0_SUB"/>
+    <param name="ros_sub_topic" value="/v_car_0/msg_to_iot"/>
+    <param name="ros_pub_topic" value="/v_car_0/msg_from_iot"/>
+    <param name="ros_iot_state_pub_topic" value="/v_car_0/iot_state"/>
+    <param name="object_name" value="V_CAR_0"/>
+  </node>
+</launch>

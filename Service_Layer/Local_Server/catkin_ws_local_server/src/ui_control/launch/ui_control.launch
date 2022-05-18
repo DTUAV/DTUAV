@@ -1,0 +1,13 @@
+<launch>
+<node name="ui_node" pkg="ui_control" type="ui_control_node" output="screen">
+      <param name="link_network_pub_topic" value="/network/link"/>
+      <param name="target_position_pub_topic" value="/target_position"/>
+      <param name="mission_start_pub_topic" value="/mission_start"/>
+      <param name="current_pose_sub_topic" value="/current_pose"/>
+      <param name="current_camera_sub_topic" value="/camera_data"/>
+      <param name="movement_track_pub_topic" value="/movement_track"/>
+      <param name="request_camera_data_pub_topic" value="/request_camera_data"/>
+      <param name="target_movement_track_pub_topic" value="/target/movement_track"/>
+      <param name="system_start_pub_topic" value="/system/start"/>
+  </node>
+</launch>

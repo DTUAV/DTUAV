@@ -1,0 +1,38 @@
+/*
+© Guangdong University of Technology,
+© The Laboratory of Intelligent Decision and Cooperative Control,
+© 2021-2022,
+© Author: Yuanlin Yang (yongwang0808@163.com)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+<http://www.apache.org/licenses/LICENSE-2.0>.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+#ifndef VR_SERVER_INFO_H
+#define VR_SERVER_INFO_H
+#include <QMainWindow>
+#include <QWidget>
+
+namespace Ui {
+class vr_server_info;
+}
+
+class vr_server_info : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit vr_server_info(QWidget *parent = 0);
+    ~vr_server_info();
+
+private:
+    Ui::vr_server_info *ui;
+};
+
+#endif // VR_SERVER_INFO_H

@@ -1,0 +1,985 @@
+fileFormatVersion: 2
+guid: 947a69e0edd7e4c418e3cc033ca8f7f4
+ModelImporter:
+  serializedVersion: 24
+  fileIDToRecycleName:
+    100000: camera
+    100002: coil
+    100004: coil 1
+    100006: coil 2
+    100008: coil 3
+    100010: coil1
+    100012: coil1 1
+    100014: coil1 2
+    100016: coil1 3
+    100018: coil2
+    100020: coil2 1
+    100022: coil2 2
+    100024: coil2 3
+    100026: coil3
+    100028: coil3 1
+    100030: coil3 2
+    100032: coil3 3
+    100034: coil4
+    100036: coil4 1
+    100038: coil4 2
+    100040: coil4 3
+    100042: coil5
+    100044: coil5 1
+    100046: coil5 2
+    100048: coil5 3
+    100050: coil6
+    100052: coil6 1
+    100054: coil6 2
+    100056: coil6 3
+    100058: coil7
+    100060: coil7 1
+    100062: coil7 2
+    100064: coil7 3
+    100066: coil8
+    100068: coil8 1
+    100070: coil8 2
+    100072: coil8 3
+    100074: coil9
+    100076: coil9 1
+    100078: coil9 2
+    100080: coil9 3
+    100082: coil_7_1
+    100084: coil_7_1 1
+    100086: coil_7_1 10
+    100088: coil_7_1 11
+    100090: coil_7_1 12
+    100092: coil_7_1 13
+    100094: coil_7_1 14
+    100096: coil_7_1 15
+    100098: coil_7_1 16
+    100100: coil_7_1 17
+    100102: coil_7_1 18
+    100104: coil_7_1 19
+    100106: coil_7_1 2
+    100108: coil_7_1 20
+    100110: coil_7_1 21
+    100112: coil_7_1 22
+    100114: coil_7_1 23
+    100116: coil_7_1 24
+    100118: coil_7_1 25
+    100120: coil_7_1 26
+    100122: coil_7_1 27
+    100124: coil_7_1 28
+    100126: coil_7_1 29
+    100128: coil_7_1 3
+    100130: coil_7_1 30
+    100132: coil_7_1 31
+    100134: coil_7_1 32
+    100136: coil_7_1 33
+    100138: coil_7_1 34
+    100140: coil_7_1 35
+    100142: coil_7_1 36
+    100144: coil_7_1 37
+    100146: coil_7_1 38
+    100148: coil_7_1 39
+    100150: coil_7_1 4
+    100152: coil_7_1 5
+    100154: coil_7_1 6
+    100156: coil_7_1 7
+    100158: coil_7_1 8
+    100160: coil_7_1 9
+    100162: coil_7_2
+    100164: coil_7_2 1
+    100166: coil_7_2 10
+    100168: coil_7_2 11
+    100170: coil_7_2 12
+    100172: coil_7_2 13
+    100174: coil_7_2 14
+    100176: coil_7_2 15
+    100178: coil_7_2 16
+    100180: coil_7_2 17
+    100182: coil_7_2 18
+    100184: coil_7_2 19
+    100186: coil_7_2 2
+    100188: coil_7_2 20
+    100190: coil_7_2 21
+    100192: coil_7_2 22
+    100194: coil_7_2 23
+    100196: coil_7_2 24
+    100198: coil_7_2 25
+    100200: coil_7_2 26
+    100202: coil_7_2 27
+    100204: coil_7_2 28
+    100206: coil_7_2 29
+    100208: coil_7_2 3
+    100210: coil_7_2 30
+    100212: coil_7_2 31
+    100214: coil_7_2 32
+    100216: coil_7_2 33
+    100218: coil_7_2 34
+    100220: coil_7_2 35
+    100222: coil_7_2 36
+    100224: coil_7_2 37
+    100226: coil_7_2 38
+    100228: coil_7_2 39
+    100230: coil_7_2 4
+    100232: coil_7_2 5
+    100234: coil_7_2 6
+    100236: coil_7_2 7
+    100238: coil_7_2 8
+    100240: coil_7_2 9
+    100242: coil_7_3
+    100244: coil_7_3 1
+    100246: coil_7_3 10
+    100248: coil_7_3 11
+    100250: coil_7_3 12
+    100252: coil_7_3 13
+    100254: coil_7_3 14
+    100256: coil_7_3 15
+    100258: coil_7_3 16
+    100260: coil_7_3 17
+    100262: coil_7_3 18
+    100264: coil_7_3 19
+    100266: coil_7_3 2
+    100268: coil_7_3 20
+    100270: coil_7_3 21
+    100272: coil_7_3 22
+    100274: coil_7_3 23
+    100276: coil_7_3 24
+    100278: coil_7_3 25
+    100280: coil_7_3 26
+    100282: coil_7_3 27
+    100284: coil_7_3 28
+    100286: coil_7_3 29
+    100288: coil_7_3 3
+    100290: coil_7_3 30
+    100292: coil_7_3 31
+    100294: coil_7_3 32
+    100296: coil_7_3 33
+    100298: coil_7_3 34
+    100300: coil_7_3 35
+    100302: coil_7_3 36
+    100304: coil_7_3 37
+    100306: coil_7_3 38
+    100308: coil_7_3 39
+    100310: coil_7_3 4
+    100312: coil_7_3 5
+    100314: coil_7_3 6
+    100316: coil_7_3 7
+    100318: coil_7_3 8
+    100320: coil_7_3 9
+    100322: coil_7_4
+    100324: coil_7_4 1
+    100326: coil_7_4 10
+    100328: coil_7_4 11
+    100330: coil_7_4 12
+    100332: coil_7_4 13
+    100334: coil_7_4 14
+    100336: coil_7_4 15
+    100338: coil_7_4 16
+    100340: coil_7_4 17
+    100342: coil_7_4 18
+    100344: coil_7_4 19
+    100346: coil_7_4 2
+    100348: coil_7_4 20
+    100350: coil_7_4 21
+    100352: coil_7_4 22
+    100354: coil_7_4 23
+    100356: coil_7_4 24
+    100358: coil_7_4 25
+    100360: coil_7_4 26
+    100362: coil_7_4 27
+    100364: coil_7_4 28
+    100366: coil_7_4 29
+    100368: coil_7_4 3
+    100370: coil_7_4 30
+    100372: coil_7_4 31
+    100374: coil_7_4 32
+    100376: coil_7_4 33
+    100378: coil_7_4 34
+    100380: coil_7_4 35
+    100382: coil_7_4 36
+    100384: coil_7_4 37
+    100386: coil_7_4 38
+    100388: coil_7_4 39
+    100390: coil_7_4 4
+    100392: coil_7_4 5
+    100394: coil_7_4 6
+    100396: coil_7_4 7
+    100398: coil_7_4 8
+    100400: coil_7_4 9
+    100402: coil_7_5
+    100404: coil_7_5 1
+    100406: coil_7_5 10
+    100408: coil_7_5 11
+    100410: coil_7_5 12
+    100412: coil_7_5 13
+    100414: coil_7_5 14
+    100416: coil_7_5 15
+    100418: coil_7_5 16
+    100420: coil_7_5 17
+    100422: coil_7_5 18
+    100424: coil_7_5 19
+    100426: coil_7_5 2
+    100428: coil_7_5 20
+    100430: coil_7_5 21
+    100432: coil_7_5 22
+    100434: coil_7_5 23
+    100436: coil_7_5 24
+    100438: coil_7_5 25
+    100440: coil_7_5 26
+    100442: coil_7_5 27
+    100444: coil_7_5 28
+    100446: coil_7_5 29
+    100448: coil_7_5 3
+    100450: coil_7_5 30
+    100452: coil_7_5 31
+    100454: coil_7_5 32
+    100456: coil_7_5 33
+    100458: coil_7_5 34
+    100460: coil_7_5 35
+    100462: coil_7_5 36
+    100464: coil_7_5 37
+    100466: coil_7_5 38
+    100468: coil_7_5 39
+    100470: coil_7_5 4
+    100472: coil_7_5 5
+    100474: coil_7_5 6
+    100476: coil_7_5 7
+    100478: coil_7_5 8
+    100480: coil_7_5 9
+    100482: coil_7_6
+    100484: coil_7_6 1
+    100486: coil_7_6 10
+    100488: coil_7_6 11
+    100490: coil_7_6 12
+    100492: coil_7_6 13
+    100494: coil_7_6 14
+    100496: coil_7_6 15
+    100498: coil_7_6 16
+    100500: coil_7_6 17
+    100502: coil_7_6 18
+    100504: coil_7_6 19
+    100506: coil_7_6 2
+    100508: coil_7_6 20
+    100510: coil_7_6 21
+    100512: coil_7_6 22
+    100514: coil_7_6 23
+    100516: coil_7_6 24
+    100518: coil_7_6 25
+    100520: coil_7_6 26
+    100522: coil_7_6 27
+    100524: coil_7_6 28
+    100526: coil_7_6 29
+    100528: coil_7_6 3
+    100530: coil_7_6 30
+    100532: coil_7_6 31
+    100534: coil_7_6 32
+    100536: coil_7_6 33
+    100538: coil_7_6 34
+    100540: coil_7_6 35
+    100542: coil_7_6 36
+    100544: coil_7_6 37
+    100546: coil_7_6 38
+    100548: coil_7_6 39
+    100550: coil_7_6 4
+    100552: coil_7_6 5
+    100554: coil_7_6 6
+    100556: coil_7_6 7
+    100558: coil_7_6 8
+    100560: coil_7_6 9
+    100562: laser
+    100564: motor
+    100566: motor 1
+    100568: motor 10
+    100570: motor 11
+    100572: motor 2
+    100574: motor 3
+    100576: motor 4
+    100578: motor 5
+    100580: motor 6
+    100582: motor 7
+    100584: motor 8
+    100586: motor 9
+    100588: motor1
+    100590: motor2
+    100592: motor3
+    100594: motor4
+    100596: pCylinder10
+    100598: pCylinder10 1
+    100600: pCylinder10 2
+    100602: pCylinder10 3
+    100604: pCylinder11
+    100606: pCylinder11 1
+    100608: pCylinder11 2
+    100610: pCylinder11 3
+    100612: pCylinder9
+    100614: polySurface1
+    100616: polySurface2
+    100618: polySurface3
+    100620: polySurface4
+    100622: polySurface7
+    100624: polySurface7 1
+    100626: polySurface7 2
+    100628: polySurface7 3
+    100630: polySurface8
+    100632: polySurface8 1
+    100634: polySurface8 2
+    100636: polySurface8 3
+    100638: propellor
+    100640: propellor 1
+    100642: propellor 2
+    100644: propellor 3
+    100646: rotors1
+    100648: rotors2
+    100650: rotors3
+    100652: rotors4
+    100654: sensor
+    100656: transform3
+    100658: transform4
+    100660: transform5
+    100662: uav
+    100664: //RootNode
+    400000: camera
+    400002: coil
+    400004: coil 1
+    400006: coil 2
+    400008: coil 3
+    400010: coil1
+    400012: coil1 1
+    400014: coil1 2
+    400016: coil1 3
+    400018: coil2
+    400020: coil2 1
+    400022: coil2 2
+    400024: coil2 3
+    400026: coil3
+    400028: coil3 1
+    400030: coil3 2
+    400032: coil3 3
+    400034: coil4
+    400036: coil4 1
+    400038: coil4 2
+    400040: coil4 3
+    400042: coil5
+    400044: coil5 1
+    400046: coil5 2
+    400048: coil5 3
+    400050: coil6
+    400052: coil6 1
+    400054: coil6 2
+    400056: coil6 3
+    400058: coil7
+    400060: coil7 1
+    400062: coil7 2
+    400064: coil7 3
+    400066: coil8
+    400068: coil8 1
+    400070: coil8 2
+    400072: coil8 3
+    400074: coil9
+    400076: coil9 1
+    400078: coil9 2
+    400080: coil9 3
+    400082: coil_7_1
+    400084: coil_7_1 1
+    400086: coil_7_1 10
+    400088: coil_7_1 11
+    400090: coil_7_1 12
+    400092: coil_7_1 13
+    400094: coil_7_1 14
+    400096: coil_7_1 15
+    400098: coil_7_1 16
+    400100: coil_7_1 17
+    400102: coil_7_1 18
+    400104: coil_7_1 19
+    400106: coil_7_1 2
+    400108: coil_7_1 20
+    400110: coil_7_1 21
+    400112: coil_7_1 22
+    400114: coil_7_1 23
+    400116: coil_7_1 24
+    400118: coil_7_1 25
+    400120: coil_7_1 26
+    400122: coil_7_1 27
+    400124: coil_7_1 28
+    400126: coil_7_1 29
+    400128: coil_7_1 3
+    400130: coil_7_1 30
+    400132: coil_7_1 31
+    400134: coil_7_1 32
+    400136: coil_7_1 33
+    400138: coil_7_1 34
+    400140: coil_7_1 35
+    400142: coil_7_1 36
+    400144: coil_7_1 37
+    400146: coil_7_1 38
+    400148: coil_7_1 39
+    400150: coil_7_1 4
+    400152: coil_7_1 5
+    400154: coil_7_1 6
+    400156: coil_7_1 7
+    400158: coil_7_1 8
+    400160: coil_7_1 9
+    400162: coil_7_2
+    400164: coil_7_2 1
+    400166: coil_7_2 10
+    400168: coil_7_2 11
+    400170: coil_7_2 12
+    400172: coil_7_2 13
+    400174: coil_7_2 14
+    400176: coil_7_2 15
+    400178: coil_7_2 16
+    400180: coil_7_2 17
+    400182: coil_7_2 18
+    400184: coil_7_2 19
+    400186: coil_7_2 2
+    400188: coil_7_2 20
+    400190: coil_7_2 21
+    400192: coil_7_2 22
+    400194: coil_7_2 23
+    400196: coil_7_2 24
+    400198: coil_7_2 25
+    400200: coil_7_2 26
+    400202: coil_7_2 27
+    400204: coil_7_2 28
+    400206: coil_7_2 29
+    400208: coil_7_2 3
+    400210: coil_7_2 30
+    400212: coil_7_2 31
+    400214: coil_7_2 32
+    400216: coil_7_2 33
+    400218: coil_7_2 34
+    400220: coil_7_2 35
+    400222: coil_7_2 36
+    400224: coil_7_2 37
+    400226: coil_7_2 38
+    400228: coil_7_2 39
+    400230: coil_7_2 4
+    400232: coil_7_2 5
+    400234: coil_7_2 6
+    400236: coil_7_2 7
+    400238: coil_7_2 8
+    400240: coil_7_2 9
+    400242: coil_7_3
+    400244: coil_7_3 1
+    400246: coil_7_3 10
+    400248: coil_7_3 11
+    400250: coil_7_3 12
+    400252: coil_7_3 13
+    400254: coil_7_3 14
+    400256: coil_7_3 15
+    400258: coil_7_3 16
+    400260: coil_7_3 17
+    400262: coil_7_3 18
+    400264: coil_7_3 19
+    400266: coil_7_3 2
+    400268: coil_7_3 20
+    400270: coil_7_3 21
+    400272: coil_7_3 22
+    400274: coil_7_3 23
+    400276: coil_7_3 24
+    400278: coil_7_3 25
+    400280: coil_7_3 26
+    400282: coil_7_3 27
+    400284: coil_7_3 28
+    400286: coil_7_3 29
+    400288: coil_7_3 3
+    400290: coil_7_3 30
+    400292: coil_7_3 31
+    400294: coil_7_3 32
+    400296: coil_7_3 33
+    400298: coil_7_3 34
+    400300: coil_7_3 35
+    400302: coil_7_3 36
+    400304: coil_7_3 37
+    400306: coil_7_3 38
+    400308: coil_7_3 39
+    400310: coil_7_3 4
+    400312: coil_7_3 5
+    400314: coil_7_3 6
+    400316: coil_7_3 7
+    400318: coil_7_3 8
+    400320: coil_7_3 9
+    400322: coil_7_4
+    400324: coil_7_4 1
+    400326: coil_7_4 10
+    400328: coil_7_4 11
+    400330: coil_7_4 12
+    400332: coil_7_4 13
+    400334: coil_7_4 14
+    400336: coil_7_4 15
+    400338: coil_7_4 16
+    400340: coil_7_4 17
+    400342: coil_7_4 18
+    400344: coil_7_4 19
+    400346: coil_7_4 2
+    400348: coil_7_4 20
+    400350: coil_7_4 21
+    400352: coil_7_4 22
+    400354: coil_7_4 23
+    400356: coil_7_4 24
+    400358: coil_7_4 25
+    400360: coil_7_4 26
+    400362: coil_7_4 27
+    400364: coil_7_4 28
+    400366: coil_7_4 29
+    400368: coil_7_4 3
+    400370: coil_7_4 30
+    400372: coil_7_4 31
+    400374: coil_7_4 32
+    400376: coil_7_4 33
+    400378: coil_7_4 34
+    400380: coil_7_4 35
+    400382: coil_7_4 36
+    400384: coil_7_4 37
+    400386: coil_7_4 38
+    400388: coil_7_4 39
+    400390: coil_7_4 4
+    400392: coil_7_4 5
+    400394: coil_7_4 6
+    400396: coil_7_4 7
+    400398: coil_7_4 8
+    400400: coil_7_4 9
+    400402: coil_7_5
+    400404: coil_7_5 1
+    400406: coil_7_5 10
+    400408: coil_7_5 11
+    400410: coil_7_5 12
+    400412: coil_7_5 13
+    400414: coil_7_5 14
+    400416: coil_7_5 15
+    400418: coil_7_5 16
+    400420: coil_7_5 17
+    400422: coil_7_5 18
+    400424: coil_7_5 19
+    400426: coil_7_5 2
+    400428: coil_7_5 20
+    400430: coil_7_5 21
+    400432: coil_7_5 22
+    400434: coil_7_5 23
+    400436: coil_7_5 24
+    400438: coil_7_5 25
+    400440: coil_7_5 26
+    400442: coil_7_5 27
+    400444: coil_7_5 28
+    400446: coil_7_5 29
+    400448: coil_7_5 3
+    400450: coil_7_5 30
+    400452: coil_7_5 31
+    400454: coil_7_5 32
+    400456: coil_7_5 33
+    400458: coil_7_5 34
+    400460: coil_7_5 35
+    400462: coil_7_5 36
+    400464: coil_7_5 37
+    400466: coil_7_5 38
+    400468: coil_7_5 39
+    400470: coil_7_5 4
+    400472: coil_7_5 5
+    400474: coil_7_5 6
+    400476: coil_7_5 7
+    400478: coil_7_5 8
+    400480: coil_7_5 9
+    400482: coil_7_6
+    400484: coil_7_6 1
+    400486: coil_7_6 10
+    400488: coil_7_6 11
+    400490: coil_7_6 12
+    400492: coil_7_6 13
+    400494: coil_7_6 14
+    400496: coil_7_6 15
+    400498: coil_7_6 16
+    400500: coil_7_6 17
+    400502: coil_7_6 18
+    400504: coil_7_6 19
+    400506: coil_7_6 2
+    400508: coil_7_6 20
+    400510: coil_7_6 21
+    400512: coil_7_6 22
+    400514: coil_7_6 23
+    400516: coil_7_6 24
+    400518: coil_7_6 25
+    400520: coil_7_6 26
+    400522: coil_7_6 27
+    400524: coil_7_6 28
+    400526: coil_7_6 29
+    400528: coil_7_6 3
+    400530: coil_7_6 30
+    400532: coil_7_6 31
+    400534: coil_7_6 32
+    400536: coil_7_6 33
+    400538: coil_7_6 34
+    400540: coil_7_6 35
+    400542: coil_7_6 36
+    400544: coil_7_6 37
+    400546: coil_7_6 38
+    400548: coil_7_6 39
+    400550: coil_7_6 4
+    400552: coil_7_6 5
+    400554: coil_7_6 6
+    400556: coil_7_6 7
+    400558: coil_7_6 8
+    400560: coil_7_6 9
+    400562: laser
+    400564: motor
+    400566: motor 1
+    400568: motor 10
+    400570: motor 11
+    400572: motor 2
+    400574: motor 3
+    400576: motor 4
+    400578: motor 5
+    400580: motor 6
+    400582: motor 7
+    400584: motor 8
+    400586: motor 9
+    400588: motor1
+    400590: motor2
+    400592: motor3
+    400594: motor4
+    400596: pCylinder10
+    400598: pCylinder10 1
+    400600: pCylinder10 2
+    400602: pCylinder10 3
+    400604: pCylinder11
+    400606: pCylinder11 1
+    400608: pCylinder11 2
+    400610: pCylinder11 3
+    400612: pCylinder9
+    400614: polySurface1
+    400616: polySurface2
+    400618: polySurface3
+    400620: polySurface4
+    400622: polySurface7
+    400624: polySurface7 1
+    400626: polySurface7 2
+    400628: polySurface7 3
+    400630: polySurface8
+    400632: polySurface8 1
+    400634: polySurface8 2
+    400636: polySurface8 3
+    400638: propellor
+    400640: propellor 1
+    400642: propellor 2
+    400644: propellor 3
+    400646: rotors1
+    400648: rotors2
+    400650: rotors3
+    400652: rotors4
+    400654: sensor
+    400656: transform3
+    400658: transform4
+    400660: transform5
+    400662: uav
+    400664: //RootNode
+    2100000: pasted__blinn2
+    2100002: surfaceShader82
+    2100004: surfaceShader78
+    2100006: surfaceShader22
+    2100008: surfaceShader57
+    2100010: surfaceShader44
+    2100012: lambert2
+    2100014: surfaceShader38
+    2100016: surfaceShader55
+    2100018: surfaceShader37
+    2100020: surfaceShader29
+    2100022: surfaceShader24
+    2100024: surfaceShader43
+    2100026: surfaceShader41
+    2100028: surfaceShader39
+    2100030: surfaceShader34
+    2100032: surfaceShader36
+    2100034: surfaceShader35
+    2100036: surfaceShader42
+    2100038: surfaceShader40
+    2100040: surfaceShader30
+    2100042: surfaceShader33
+    2100044: surfaceShader26
+    2100046: surfaceShader49
+    2100048: surfaceShader47
+    2100050: surfaceShader48
+    2100052: surfaceShader45
+    2100054: surfaceShader46
+    2100056: blinn1
+    2100058: surfaceShader54
+    2100060: surfaceShader53
+    2100062: surfaceShader32
+    2100064: surfaceShader62
+    2100066: lambert1
+    2100068: surfaceShader17
+    2100070: surfaceShader67
+    2100072: surfaceShader64
+    2100074: surfaceShader16
+    2100076: surfaceShader68
+    2100078: surfaceShader61
+    2100080: surfaceShader18
+    2100082: surfaceShader66
+    2100084: surfaceShader63
+    2100086: surfaceShader15
+    2100088: surfaceShader69
+    2300000: camera
+    2300002: coil_7_6
+    2300004: coil_7_6 1
+    2300006: coil_7_6 10
+    2300008: coil_7_6 11
+    2300010: coil_7_6 12
+    2300012: coil_7_6 13
+    2300014: coil_7_6 14
+    2300016: coil_7_6 15
+    2300018: coil_7_6 16
+    2300020: coil_7_6 17
+    2300022: coil_7_6 18
+    2300024: coil_7_6 19
+    2300026: coil_7_6 2
+    2300028: coil_7_6 20
+    2300030: coil_7_6 21
+    2300032: coil_7_6 22
+    2300034: coil_7_6 23
+    2300036: coil_7_6 24
+    2300038: coil_7_6 25
+    2300040: coil_7_6 26
+    2300042: coil_7_6 27
+    2300044: coil_7_6 28
+    2300046: coil_7_6 29
+    2300048: coil_7_6 3
+    2300050: coil_7_6 30
+    2300052: coil_7_6 31
+    2300054: coil_7_6 32
+    2300056: coil_7_6 33
+    2300058: coil_7_6 34
+    2300060: coil_7_6 35
+    2300062: coil_7_6 36
+    2300064: coil_7_6 37
+    2300066: coil_7_6 38
+    2300068: coil_7_6 39
+    2300070: coil_7_6 4
+    2300072: coil_7_6 5
+    2300074: coil_7_6 6
+    2300076: coil_7_6 7
+    2300078: coil_7_6 8
+    2300080: coil_7_6 9
+    2300082: laser
+    2300084: pCylinder10
+    2300086: pCylinder10 1
+    2300088: pCylinder10 2
+    2300090: pCylinder10 3
+    2300092: pCylinder11
+    2300094: pCylinder11 1
+    2300096: pCylinder11 2
+    2300098: pCylinder11 3
+    2300100: polySurface1
+    2300102: polySurface4
+    2300104: polySurface7
+    2300106: polySurface7 1
+    2300108: polySurface7 2
+    2300110: polySurface7 3
+    2300112: polySurface8
+    2300114: polySurface8 1
+    2300116: polySurface8 2
+    2300118: polySurface8 3
+    3300000: camera
+    3300002: coil_7_6
+    3300004: coil_7_6 1
+    3300006: coil_7_6 10
+    3300008: coil_7_6 11
+    3300010: coil_7_6 12
+    3300012: coil_7_6 13
+    3300014: coil_7_6 14
+    3300016: coil_7_6 15
+    3300018: coil_7_6 16
+    3300020: coil_7_6 17
+    3300022: coil_7_6 18
+    3300024: coil_7_6 19
+    3300026: coil_7_6 2
+    3300028: coil_7_6 20
+    3300030: coil_7_6 21
+    3300032: coil_7_6 22
+    3300034: coil_7_6 23
+    3300036: coil_7_6 24
+    3300038: coil_7_6 25
+    3300040: coil_7_6 26
+    3300042: coil_7_6 27
+    3300044: coil_7_6 28
+    3300046: coil_7_6 29
+    3300048: coil_7_6 3
+    3300050: coil_7_6 30
+    3300052: coil_7_6 31
+    3300054: coil_7_6 32
+    3300056: coil_7_6 33
+    3300058: coil_7_6 34
+    3300060: coil_7_6 35
+    3300062: coil_7_6 36
+    3300064: coil_7_6 37
+    3300066: coil_7_6 38
+    3300068: coil_7_6 39
+    3300070: coil_7_6 4
+    3300072: coil_7_6 5
+    3300074: coil_7_6 6
+    3300076: coil_7_6 7
+    3300078: coil_7_6 8
+    3300080: coil_7_6 9
+    3300082: laser
+    3300084: pCylinder10
+    3300086: pCylinder10 1
+    3300088: pCylinder10 2
+    3300090: pCylinder10 3
+    3300092: pCylinder11
+    3300094: pCylinder11 1
+    3300096: pCylinder11 2
+    3300098: pCylinder11 3
+    3300100: polySurface1
+    3300102: polySurface4
+    3300104: polySurface7
+    3300106: polySurface7 1
+    3300108: polySurface7 2
+    3300110: polySurface7 3
+    3300112: polySurface8
+    3300114: polySurface8 1
+    3300116: polySurface8 2
+    3300118: polySurface8 3
+    4300000: laser
+    4300002: camera
+    4300004: polySurface1
+    4300006: polySurface4
+    4300008: polySurface8
+    4300010: polySurface7
+    4300012: pCylinder11
+    4300014: pCylinder10
+    4300016: coil_7_6
+    4300018: coil_7_6
+    4300020: coil_7_6
+    4300022: coil_7_6
+    4300024: coil_7_6
+    4300026: coil_7_6
+    4300028: coil_7_6
+    4300030: coil_7_6
+    4300032: coil_7_6
+    4300034: coil_7_6
+    4300036: polySurface8
+    4300038: polySurface7
+    4300040: pCylinder11
+    4300042: pCylinder10
+    4300044: coil_7_6
+    4300046: coil_7_6
+    4300048: coil_7_6
+    4300050: coil_7_6
+    4300052: coil_7_6
+    4300054: coil_7_6
+    4300056: coil_7_6
+    4300058: coil_7_6
+    4300060: coil_7_6
+    4300062: coil_7_6
+    4300064: polySurface8
+    4300066: polySurface7
+    4300068: pCylinder11
+    4300070: pCylinder10
+    4300072: coil_7_6
+    4300074: coil_7_6
+    4300076: coil_7_6
+    4300078: coil_7_6
+    4300080: coil_7_6
+    4300082: coil_7_6
+    4300084: coil_7_6
+    4300086: coil_7_6
+    4300088: coil_7_6
+    4300090: coil_7_6
+    4300092: polySurface8
+    4300094: polySurface7
+    4300096: pCylinder11
+    4300098: pCylinder10
+    4300100: coil_7_6
+    4300102: coil_7_6
+    4300104: coil_7_6
+    4300106: coil_7_6
+    4300108: coil_7_6
+    4300110: coil_7_6
+    4300112: coil_7_6
+    4300114: coil_7_6
+    4300116: coil_7_6
+    4300118: coil_7_6
+    7400000: Take 001
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

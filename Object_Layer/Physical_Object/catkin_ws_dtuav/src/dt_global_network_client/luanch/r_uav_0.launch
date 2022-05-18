@@ -1,0 +1,13 @@
+<launch>
+<node name="global_network_node" pkg="dt_global_network_client" type="dt_global_network_client_node" output="screen">
+    <param name="product_key" value="a1GcqS5WFte" />
+    <param name="device_name" value="R_UAV_0" />
+    <param name="device_secret" value="a516eead0501ed260f7caf87143b05d6"/>
+    <param name="iot_pub_topic" value="/a1GcqS5WFte/R_UAV_0/user/R_UAV_0_PUB"/>
+    <param name="iot_sub_topic" value="/a1GcqS5WFte/R_UAV_0/user/R_UAV_0_SUB"/>
+    <param name="ros_sub_topic" value="/r_uav_0/msg_to_cloud"/>
+    <param name="ros_pub_topic" value="/r_uav_0/msg_from_cloud"/>
+    <param name="ros_iot_state_pub_topic" value="/r_uav_0/cloud_state"/>
+    <param name="object_name" value="R_UAV_0"/>
+  </node>
+</launch>

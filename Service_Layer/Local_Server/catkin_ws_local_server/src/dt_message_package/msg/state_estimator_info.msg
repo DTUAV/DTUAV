@@ -1,0 +1,17 @@
+float64 system_time
+uint32 state_dim
+uint32 observe_dim
+uint32 input_dim
+float32 model_err
+float32 measure_err
+float32[] X
+float32[] X_Predict
+float32[] A
+float32[] B
+float32[] U
+float32[] Y
+float32[] H
+float32[] P
+float32[] K
+float32[] Q
+float32[] R
