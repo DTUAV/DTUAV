@@ -1,0 +1,76 @@
+<launch>
+<node name="px4_control_node" pkg="dt_px4_control" type="dt_px4_control_node" output="screen">
+      <!--dt px4 control-->
+      <param name="rc_sub_topic" value="/mavros/rc/in"/>
+      <param name="local_pose_sub_topic" value ="/mavros/local_position/pose"/>
+      <param name="global_position_sub_topic" value="/mavros/global_position/global"/>
+      <param name="target_velocity_pub_topic" value="/mavros/setpoint_velocity/cmd_vel_unstamped"/>
+      <param name="target_local_position_pub_topic" value="/mavros/setpoint_position/local"/>
+      <param name="target_global_position_pub_topic" value="/mavros/setpoint_position/global"/>
+      <param name="velocity_cmd_sub_topic" value="/control/cmd/velocity"/>
+      <param name="local_position_cmd_sub_topic" value="/control/cmd/local_position"/>
+      <param name="global_position_cmd_sub_topic" value="/control/cmd/global_position"/>
+      <param name="control_start_type" value="0"/>         <!--[0]:Auto Enter Offboard Control Way&& Auto Arm    [1]:Auto Enter Offboard && Manual Arm [2]:Manual Enter Offboard Control Way && Auto Arm  [4] Manual Enter Offboard Control Way && Manual Arm -->
+      <param name="start_type" value="0"/>           <!--[0]:Start By RC Controller [1]:Start By Cloud Command [2]:Start By Local Server [3]:Start By VR Server-->
+
+     <!--RC Controller Relatived Channeles If Select the Start Way is [0]: Start By RC Controller, You Should Config This Paramters-->
+      <param name="rc_ref_cmd_channel" value="8"/>
+      <param name="rc_ref_cmd_way" value="0"/>        <!--[0]: Velocity Control [1]:Local Position Control [2]:Global Position Control-->
+      <param name="rc_land_channel" value="6"/>
+
+      <param name="px4_state_msg_sub_topic" value="/mavros/state"/>                                        <!--The State of PX4-->
+      <param name="px4_arming_client_topic" value="/mavros/cmd/arming"/>                                   <!--The Arm to PX4-->
+      <param name="px4_set_mode_client_topic" value="/mavros/set_mode"/>                                   <!--The mode setting to PX4-->
+      <param name="run_frequency_hz" value="20.0"/>                                                          <!--The Frequen of Target Velocity Message To PX4-->
+
+      <param name="change_control_type_sub_topic" value="/target_cmd_type"/>   <!--[0]:Velocity Control [1]: Local Position Control [2]:Global Position Control-->
+
+      <param name="is_use_gps" value="true"/>
+
+
+
+      <!--control_cmd_wrapper-->
+
+      <param name="velocity_cmd_pub_topic" value="/control/cmd/velocity"/>
+      <param name="local_position_cmd_pub_topic" value="/control/cmd/local_position"/>
+      <param name="global_position_cmd_pub_topic" value="/control/cmd/global_position"/>
+
+
+      <param name="cloud_server_local_position_sub_topic" value="/cloud_server/target/local_position"/>
+      <param name="cloud_server_global_position_sub_topic" value="/cloud_server/target/global_position"/>
+      <param name="cloud_server_velocity_sub_topic" value="/cloud_server/target/velocity"/>
+      <param name="cloud_server_control_apply_sub_topic" value="/cloud_server/control/apply"/>
+      <param name="cloud_server_target_cmd_type_sub_topic" value="/cloud_server/target_cmd_type"/>
+
+
+      <param name="local_server_local_position_sub_topic" value="/local_server/target/local_position"/>
+      <param name="local_server_global_position_sub_topic" value="/local_server/target/global_position"/>
+      <param name="local_server_velocity_sub_topic" value="/local_server/target/velocity"/>
+      <param name="local_server_control_apply_sub_topic" value="/local_server/control/apply"/>
+      <param name="local_server_target_cmd_type_sub_topic" value="/local_server/target_cmd_type"/>
+
+      <param name="vr_server_local_position_sub_topic" value="/vr_server/target/local_position"/>
+      <param name="vr_server_global_position_sub_topic" value="/vr_server/target/global_position"/>
+      <param name="vr_server_velocity_sub_topic" value="/vr_server/target/velocity"/>
+      <param name="vr_server_control_apply_sub_topic" value="/vr_server/control/apply"/>
+      <param name="vr_server_target_cmd_type_sub_topic" value="/vr_server/target_cmd_type"/>
+
+      <param name="dt_object_local_position_sub_topic" value="/dt_object/target/local_position"/>
+      <param name="dt_object_global_position_sub_topic" value="/dt_object/target/global_position"/>
+      <param name="dt_object_velocity_sub_topic" value="/dt_object/target/velocity"/>
+      <param name="dt_object_control_apply_sub_topic" value="/dt_object/control/apply"/>
+      <param name="dt_object_target_cmd_type_sub_topic" value="/dt_object/target_cmd_type"/>
+
+      <param name="local_machine_local_position_sub_topic" value="/local_machine/target/local_position"/>
+      <param name="local_machine_global_position_sub_topic" value="/local_machine/target/global_position"/>
+      <param name="local_machine_velocity_sub_topic" value="/local_machine/target/velocity"/>
+      <param name="local_machine_control_apply_sub_topic" value="/local_machine/control/apply"/>
+      <param name="local_machine_target_cmd_type_sub_topic" value="/local_machine/target_cmd_type"/>
+
+      <param name="cur_control_type_pub_topic" value="/cur_control_type"/>
+      <param name="control_type_pub_frequency" value="1.0"/>
+
+      <param name="target_cmd_type_pub_topic" value="/target_cmd_type"/>
+      </node>
+
+</launch>

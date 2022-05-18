@@ -1,0 +1,190 @@
+<launch>
+<arg name="UAV" default="V_UAV_1"/>
+<node name="$(arg UAV)_global_network_node" pkg="dt_global_network_client" type="dt_global_network_client_node" output="screen">
+    <param name="product_key" value="a1ss57Xqbet" />
+    <param name="device_name" value="VirtualUAV_1" />
+    <param name="device_secret" value="ac5b4814392a7aee6ed2837241ce4105"/>
+    <param name="iot_pub_topic" value="/a1ss57Xqbet/VirtualUAV_1/user/VirtualUAV_1_Pub"/>
+    <param name="iot_sub_topic" value="/a1ss57Xqbet/VirtualUAV_1/user/VirtualUAV_1_Sub"/>
+    <param name="ros_sub_topic" value="/$(arg UAV)/to/cloud_server/data"/>
+    <param name="ros_pub_topic" value="/$(arg UAV)/from/cloud_server/data"/>
+    <param name="ros_iot_state_pub_topic" value="/$(arg UAV)/cloud_connect_state"/>
+    <param name="object_name" value="$(arg UAV)"/>
+  </node>
+  <node name="$(arg UAV)_packing_and_unpacking_node1" pkg="dt_message_packing_unpacking" type="dt_message_packing_unpacking_node" output="screen">
+        <!--packing-->
+        <param name="SourceID" value="201"/>
+        <param name="TargetID" value="1"/>
+        <param name="DtObjectID" value="1"/>
+        <param name="IotMessagePubTopic" value="/$(arg UAV)/to/cloud_server/data"/>
+        <param name="GlobalPositionMessageSubTopic" value="/$(arg UAV)/mavros/global_position/global"/>
+        <param name="LocalPositionMessageSubTopic" value="/$(arg UAV)/mavros/local_position/pose"/>
+        <param name="LocalVelocityMessageSubTopic" value="/$(arg UAV)/mavros/local_position/velocity"/>
+        <param name="UavStateMessageSubTopic" value="/$(arg UAV)/mavros/state"/>
+        <param name="MessagePubFrequency" value="10"/>
+
+        <!--unpacking-->
+        <param name="IotMessageSubTopic" value="/$(arg UAV)/from/cloud_server/data"/>
+
+        <param name="cloud_server_local_position_pub_topic" value="/$(arg UAV)/cloud_server/target/local_position"/>
+        <param name="cloud_server_global_position_pub_topic" value="/$(arg UAV)/cloud_server/target/global_position"/>
+        <param name="cloud_server_velocity_pub_topic" value="/$(arg UAV)/cloud_server/target/velocity"/>
+        <param name="cloud_server_control_apply_pub_topic" value="/$(arg UAV)/cloud_server/control/apply"/>
+        <param name="cloud_server_target_cmd_type_pub_topic" value="/$(arg UAV)/cloud_server/target_cmd_type"/>
+
+
+        <param name="local_server_local_position_pub_topic" value="/$(arg UAV)/local_server/target/local_position"/>
+        <param name="local_server_global_position_pub_topic" value="/$(arg UAV)/local_server/target/global_position"/>
+        <param name="local_server_velocity_pub_topic" value="/$(arg UAV)/local_server/target/velocity"/>
+        <param name="local_server_control_apply_pub_topic" value="/$(arg UAV)/local_server/control/apply"/>
+        <param name="local_server_target_cmd_type_pub_topic" value="/$(arg UAV)/local_server/target_cmd_type"/>
+
+        <param name="vr_server_local_position_pub_topic" value="/$(arg UAV)/vr_server/target/local_position"/>
+        <param name="vr_server_global_position_pub_topic" value="/$(arg UAV)/vr_server/target/global_position"/>
+        <param name="vr_server_velocity_pub_topic" value="/$(arg UAV)/vr_server/target/velocity"/>
+        <param name="vr_server_control_apply_pub_topic" value="/$(arg UAV)/vr_server/control/apply"/>
+        <param name="vr_server_target_cmd_type_pub_topic" value="/$(arg UAV)/vr_server/target_cmd_type"/>
+
+        <param name="dt_object_local_position_pub_topic" value="/$(arg UAV)/dt_object/target/local_position"/>
+        <param name="dt_object_global_position_pub_topic" value="/$(arg UAV)/dt_object/target/global_position"/>
+        <param name="dt_object_velocity_pub_topic" value="/$(arg UAV)/dt_object/target/velocity"/>
+        <param name="dt_object_control_apply_pub_topic" value="/$(arg UAV)/dt_object/control/apply"/>
+        <param name="dt_object_target_cmd_type_pub_topic" value="/$(arg UAV)/dt_object/target_cmd_type"/>
+
+
+  </node>
+<!--
+<node name="$(arg UAV)_local_network_node" pkg="dt_local_network_client" type="dt_local_network_client_node" output="screen">
+      <param name="port" value="8080" />
+      <param name="ros_pub_topic" value="/$(arg UAV)/from/local_server/data" />
+      <param name="ros_sub_topic" value="/$(arg UAV)/to/local_server/data"/>
+      <param name="data_recv_rate_hz" value="1000"/>
+      <param name="server_ip" value="100.101.155.46"/>
+</node>
+-->
+<node name="$(arg UAV)_packing_and_unpacking_node2" pkg="dt_message_packing_unpacking" type="dt_message_packing_unpacking_node" output="screen">
+      <!--packing-->
+      <param name="SourceID" value="1"/>
+      <param name="TargetID" value="201"/>
+      <param name="DtObjectID" value="201"/>
+      <param name="IotMessagePubTopic" value="/$(arg UAV)/to/local_server/data"/>
+      <param name="GlobalPositionMessageSubTopic" value="/$(arg UAV)/mavros/global_position/global"/>
+      <param name="LocalPositionMessageSubTopic" value="/$(arg UAV)/mavros/local_position/pose"/>
+      <param name="LocalVelocityMessageSubTopic" value="/$(arg UAV)/mavros/local_position/velocity"/>
+      <param name="UavStateMessageSubTopic" value="/$(arg UAV)/mavros/state"/>
+      <param name="MessagePubFrequency" value="10"/>
+
+      <!--unpacking-->
+      <param name="IotMessageSubTopic" value="/$(arg UAV)/from/local_server/data"/>
+
+      <param name="cloud_server_local_position_pub_topic" value="/$(arg UAV)/cloud_server/target/local_position"/>
+      <param name="cloud_server_global_position_pub_topic" value="/$(arg UAV)/cloud_server/target/global_position"/>
+      <param name="cloud_server_velocity_pub_topic" value="/$(arg UAV)/cloud_server/target/velocity"/>
+      <param name="cloud_server_control_apply_pub_topic" value="/$(arg UAV)/cloud_server/control/apply"/>
+      <param name="cloud_server_target_cmd_type_pub_topic" value="/$(arg UAV)/cloud_server/target_cmd_type"/>
+
+
+      <param name="local_server_local_position_pub_topic" value="/$(arg UAV)/local_server/target/local_position"/>
+      <param name="local_server_global_position_pub_topic" value="/$(arg UAV)/local_server/target/global_position"/>
+      <param name="local_server_velocity_pub_topic" value="/$(arg UAV)/local_server/target/velocity"/>
+      <param name="local_server_control_apply_pub_topic" value="/$(arg UAV)/local_server/control/apply"/>
+      <param name="local_server_target_cmd_type_pub_topic" value="/$(arg UAV)/local_server/target_cmd_type"/>
+
+      <param name="vr_server_local_position_pub_topic" value="/$(arg UAV)/vr_server/target/local_position"/>
+      <param name="vr_server_global_position_pub_topic" value="/$(arg UAV)/vr_server/target/global_position"/>
+      <param name="vr_server_velocity_pub_topic" value="/$(arg UAV)/vr_server/target/velocity"/>
+      <param name="vr_server_control_apply_pub_topic" value="/$(arg UAV)/vr_server/control/apply"/>
+      <param name="vr_server_target_cmd_type_pub_topic" value="/$(arg UAV)/vr_server/target_cmd_type"/>
+
+      <param name="dt_object_local_position_pub_topic" value="/$(arg UAV)/dt_object/target/local_position"/>
+      <param name="dt_object_global_position_pub_topic" value="/$(arg UAV)/dt_object/target/global_position"/>
+      <param name="dt_object_velocity_pub_topic" value="/$(arg UAV)/dt_object/target/velocity"/>
+      <param name="dt_object_control_apply_pub_topic" value="/$(arg UAV)/dt_object/control/apply"/>
+      <param name="dt_object_target_cmd_type_pub_topic" value="/$(arg UAV)/dt_object/target_cmd_type"/>
+</node>
+
+<node name="$(arg UAV)_mission_node" pkg="dt_mission" type="dt_mission_node" output="screen">
+
+<!--mission_point-->
+    <rosparam file="$(find dt_mission)/config/mission_point.yaml" command="load"/>
+    <param name="mission_point_err" value="0.05"/>
+    <param name="mission_control_sub_topic" value="/$(arg UAV)/dt_mission/start"/>
+    <param name="mission_change_type" value="0"/>                 <!--0:Auto 1:Other-->
+    <param name="feeback_sub_topic" value="/$(arg UAV)/mavros/local_position/pose"/>
+    <param name="next_mission_point_sub_topic" value="/$(arg UAV)/dt_mission/mission_control/next"/>
+    <param name="mission_point_pub_topic" value="/$(arg UAV)/dt_mission/mission_point"/>
+    <param name="yawl_file_name" value="mission_point"/>
+    <param name="circle_run" value="0"/>                          <!--0:Not Circle Run. 1:Circle Run-->
+
+    <param name="local_machine_local_position_pub_topic" value="/$(arg UAV)/local_machine/target/local_position"/>
+    <param name="local_machine_global_position_pub_topic" value="/$(arg UAV)/local_machine/target/global_position"/>
+    <param name="local_machine_velocity_pub_topic" value="/$(arg UAV)/local_machine/target/velocity"/>
+    <param name="local_machine_control_apply_pub_topic" value="/$(arg UAV)/local_machine/control/apply"/>
+    <param name="local_machine_target_cmd_type_pub_topic" value="/$(arg UAV)/local_machine/target_cmd_type"/>
+   <!--generate path-->
+    <param name="init_x" value="0.0"/>
+    <param name="init_y" value="0.0"/>
+    <param name="init_z" value="0.0"/>
+     <param name="init_velocity_x" value = "0.0"/>
+     <param name="init_velocity_y" value = "0.0"/>
+     <param name="init_velocity_z" value = "0.0"/>
+     <param name="max_velocity_x" value = "1.5"/>
+     <param name="max_velocity_y" value = "1.5"/>
+     <param name="max_velocity_z" value = "1.5"/>
+     <param name="max_acc_x" value = "3.0"/>
+     <param name="max_acc_y" value = "3.0"/>
+     <param name="max_acc_z" value = "3.0"/>
+     <param name="max_jerk_x" value = "12.0"/>
+     <param name="max_jerk_y" value = "12.0"/>
+     <param name="max_jerK_z" value = "12.0"/>
+     <param name="TargetPosSubTopic" value="/$(arg UAV)/target_position"/>
+     <param name="RefPosPubTopic" value ="/$(arg UAV)/mavros/setpoint_position/local"/>
+     <param name="curPositionSubTopic" value="/$(arg UAV)/mavros/local_position/pose"/>
+     <param name="curVelocitySubTopic" value="/$(arg UAV)/mavros/local_position/velocity"/>
+     <param name="UpdateHz" value="50"/>
+
+  </node>
+
+<node name="$(arg UAV)_control_cmd_wrapper_node" pkg="dt_px4_control" type="control_cmd_wrapper_node" output="screen">
+
+      <param name="velocity_cmd_pub_topic" value="/$(arg UAV)/control/cmd/velocity"/>
+      <param name="local_position_cmd_pub_topic" value="/$(arg UAV)/control/cmd/local_position"/>
+      <param name="global_position_cmd_pub_topic" value="/$(arg UAV)/control/cmd/global_position"/>
+
+      <param name="cloud_server_local_position_sub_topic" value="/$(arg UAV)/cloud_server/target/local_position"/>
+      <param name="cloud_server_global_position_sub_topic" value="/$(arg UAV)/cloud_server/target/global_position"/>
+      <param name="cloud_server_velocity_sub_topic" value="/$(arg UAV)/cloud_server/target/velocity"/>
+      <param name="cloud_server_control_apply_sub_topic" value="/$(arg UAV)/cloud_server/control/apply"/>
+      <param name="cloud_server_target_cmd_type_sub_topic" value="/$(arg UAV)/cloud_server/target_cmd_type"/>
+
+
+      <param name="local_server_local_position_sub_topic" value="/$(arg UAV)/local_server/target/local_position"/>
+      <param name="local_server_global_position_sub_topic" value="/$(arg UAV)/local_server/target/global_position"/>
+      <param name="local_server_velocity_sub_topic" value="/$(arg UAV)/local_server/target/velocity"/>
+      <param name="local_server_control_apply_sub_topic" value="/$(arg UAV)/local_server/control/apply"/>
+      <param name="local_server_target_cmd_type_sub_topic" value="/$(arg UAV)/local_server/target_cmd_type"/>
+
+      <param name="vr_server_local_position_sub_topic" value="/$(arg UAV)/vr_server/target/local_position"/>
+      <param name="vr_server_global_position_sub_topic" value="/$(arg UAV)/vr_server/target/global_position"/>
+      <param name="vr_server_velocity_sub_topic" value="/$(arg UAV)/vr_server/target/velocity"/>
+      <param name="vr_server_control_apply_sub_topic" value="/$(arg UAV)/vr_server/control/apply"/>
+      <param name="vr_server_target_cmd_type_sub_topic" value="/$(arg UAV)/vr_server/target_cmd_type"/>
+
+      <param name="dt_object_local_position_sub_topic" value="/$(arg UAV)/dt_object/target/local_position"/>
+      <param name="dt_object_global_position_sub_topic" value="/$(arg UAV)/dt_object/target/global_position"/>
+      <param name="dt_object_velocity_sub_topic" value="/$(arg UAV)/dt_object/target/velocity"/>
+      <param name="dt_object_control_apply_sub_topic" value="/$(arg UAV)/dt_object/control/apply"/>
+      <param name="dt_object_target_cmd_type_sub_topic" value="/$(arg UAV)/dt_object/target_cmd_type"/>
+
+      <param name="local_machine_local_position_sub_topic" value="/$(arg UAV)/local_machine/target/local_position"/>
+      <param name="local_machine_global_position_sub_topic" value="/$(arg UAV)/local_machine/target/global_position"/>
+      <param name="local_machine_velocity_sub_topic" value="/$(arg UAV)/local_machine/target/velocity"/>
+      <param name="local_machine_control_apply_sub_topic" value="/$(arg UAV)/local_machine/control/apply"/>
+      <param name="local_machine_target_cmd_type_sub_topic" value="/$(arg UAV)/local_machine/target_cmd_type"/>
+
+      <param name="cur_control_type_pub_topic" value="/$(arg UAV)/cur_control_type"/>
+      <param name="control_type_pub_frequency" value="1.0"/>
+      <param name="target_cmd_type_pub_topic" value="/$(arg UAV)/target_cmd_type"/>
+</node>
+
+</launch>

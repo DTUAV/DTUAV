@@ -1,0 +1,1 @@
+bool next_point
