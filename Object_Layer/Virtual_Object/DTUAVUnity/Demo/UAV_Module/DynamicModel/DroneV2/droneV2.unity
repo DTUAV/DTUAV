@@ -265,10 +265,6 @@ MonoBehaviour:
   uavPosition_x: 1
   uavPosition_y: 0.5
   uavPosition_z: 3
-  refUavLocalPosition_x: 0
-  refUavLocalPosition_y: 0
-  refUavLocalPosition_z: 0
-  uav_init_position: {x: 0, y: 0, z: 0}
   takeoff: 0
   is_lane: 0
   lane: 1
@@ -465,7 +461,7 @@ GameObject:
   - component: {fileID: 137216943}
   - component: {fileID: 137216942}
   m_Layer: 0
-  m_Name: Terrain (1)
+  m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

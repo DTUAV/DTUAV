@@ -20,7 +20,7 @@ namespace DTUAV.Math.DataNoise
 {
     public class DataNoise
     {
-        private static int GetRandomSeed() //产生随机种子
+        private static int GetRandomSeed() 
         {
             byte[] bytes = new byte[4];
             System.Security.Cryptography.RNGCryptoServiceProvider rng =
@@ -29,7 +29,7 @@ namespace DTUAV.Math.DataNoise
             return BitConverter.ToInt32(bytes, 0);
         }
 
-        public static double GaussNiose1() //用box muller的方法产生均值为0，方差为1的正太分布随机数
+        public static double GaussNiose1() 
         {
             // Random ro = new Random(10);
             // long tick = DateTime.Now.Ticks;
@@ -38,7 +38,7 @@ namespace DTUAV.Math.DataNoise
             double r1 = ran.NextDouble();
             double r2 = ran.NextDouble();
             double result = System.Math.Sqrt((-2) * System.Math.Log(r2)) * System.Math.Sin(2 * System.Math.PI * r1);
-            return result; //返回随机数
+            return result; 
         }
     }
 }

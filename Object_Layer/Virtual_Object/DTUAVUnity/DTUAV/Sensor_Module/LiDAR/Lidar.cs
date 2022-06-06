@@ -16,6 +16,7 @@ limitations under the License.
 */
 using System.Collections;
 using System.Collections.Generic;
+using DTUAV.Math.DataNoise;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -37,8 +38,10 @@ namespace DTUAV.Sensor_Module.LiDAR
         private List<Vector3> _rayDirections;
         private List<Vector3> _rayPositions;
         private List<float> _distances;
+        private List<float> _intensities;
         private bool _showLidar;
-
+        private bool _isAddNoise =false;
+        private Vector3 _noise;
         public bool SetHorizontalAngleInc(float horizontalAngleInc)
         {
             _horizontalAngleInc = horizontalAngleInc;
@@ -89,11 +92,12 @@ namespace DTUAV.Sensor_Module.LiDAR
                 while (currentVerticalAngle <= _verticalAngleEnd)
                 {
                     _rayDirections.Add(new Vector3(Mathf.Cos(currentVerticalAngle * Mathf.PI / 180.0f) * Mathf.Sin(currenthorizontalAngle * Mathf.PI / 180.0f), Mathf.Sin(currentVerticalAngle * Mathf.PI / 180.0f), Mathf.Cos(currentVerticalAngle * Mathf.PI / 180.0f) * Mathf.Cos(currenthorizontalAngle * Mathf.PI / 180.0f)));
-                    currentVerticalAngle = currentVerticalAngle + _verticalAngleInc;
+                    currentVerticalAngle += _verticalAngleInc;
+                    //currentVerticalAngle =  currentVerticalAngle > 360 ? currentVerticalAngle - 360:currentVerticalAngle < -360 ? currentVerticalAngle + 360 : currentVerticalAngle;
                 }
-
-                currenthorizontalAngle = _verticalAngleStart;
-                currenthorizontalAngle = currenthorizontalAngle + _horizontalAngleInc;
+                currentVerticalAngle = _verticalAngleStart;
+                currenthorizontalAngle += _horizontalAngleInc;
+                //currenthorizontalAngle = currenthorizontalAngle > 360 ? currenthorizontalAngle - 360 : currenthorizontalAngle < -360 ? currenthorizontalAngle + 360 : currenthorizontalAngle;
             }
         }
 
@@ -125,6 +129,10 @@ namespace DTUAV.Sensor_Module.LiDAR
             return true;
         }
 
+        public List<float> GetIntensities()
+        {
+            return _intensities;
+        }
         public Vector3 GetCurrentPosition()
         {
             return _currentPosition;
@@ -177,10 +185,107 @@ namespace DTUAV.Sensor_Module.LiDAR
             return _rayPositions;
         }
 
+        //2D Lidar with updated yaw
+        public bool UpdateSensor(Vector3 currentPosition,float horizontalAngleStart,float horizontalAngleEnd)
+        {
+            _horizontalAngleStart = horizontalAngleStart;
+            _horizontalAngleEnd = horizontalAngleEnd;
+            _rayDirections.Clear();
+            UpdateDirection();
+            _distances.Clear();
+            _rayPositions.Clear();
+            _intensities.Clear();
+            _currentPosition = currentPosition;
+            Ray ray = new Ray(_currentPosition, Vector3.zero);
+            RaycastHit hit;
+            Vector3 targetRayPosition = Vector3.zero;
+            for (int i = 0; i < _rayDirections.Count; i++)
+            {
+                ray.direction = _rayDirections[i];
+                if (Physics.Raycast(ray, out hit, _maxRange, _layerMask))
+                {
+                    if (hit.distance < _minRange)
+                    {
+                        if (_isAddNoise)
+                        {
+                            targetRayPosition.x = currentPosition.x + _minRange * ray.direction.x + (float) DataNoise.GaussNiose1() / 100.0f;
+                            targetRayPosition.y = currentPosition.y + _minRange * ray.direction.y + (float) DataNoise.GaussNiose1() / 100.0f; ;
+                            targetRayPosition.z = currentPosition.z + _minRange * ray.direction.z + (float) DataNoise.GaussNiose1() / 100.0f; ;
+                            _distances.Add(_minRange + (float) DataNoise.GaussNiose1() / 100.0f);
+                        }
+                        else
+                        {
+                            targetRayPosition.x = currentPosition.x + _minRange * ray.direction.x;
+                            targetRayPosition.y = currentPosition.y + _minRange * ray.direction.y;
+                            targetRayPosition.z = currentPosition.z + _minRange * ray.direction.z;
+                            _distances.Add(_minRange);
+                        }
+                        
+                        if (_showLidar)
+                        {
+                            Debug.DrawLine(currentPosition, targetRayPosition, Color.red);
+                        }
+                        _rayPositions.Add(targetRayPosition);
+                        _intensities.Add(0);
+
+                    }
+                    else
+                    {
+                        if (_showLidar)
+                        {
+                            Debug.DrawLine(currentPosition, hit.point, Color.red);
+                        }
+
+                        if (_isAddNoise)
+                        {
+                            _noise.x = (float) DataNoise.GaussNiose1() / 100.0f;
+                            _noise.y = (float)DataNoise.GaussNiose1() / 100.0f;
+                            _noise.z = (float)DataNoise.GaussNiose1() / 100.0f;
+                            _rayPositions.Add(hit.point + _noise);
+                            _distances.Add(hit.distance+ (float)DataNoise.GaussNiose1() / 100.0f);
+                        }
+                        else
+                        {
+                            _rayPositions.Add(hit.point);
+                            _distances.Add(hit.distance);
+                        }
+                        _intensities.Add(255 * (hit.distance - _minRange) / _minRange);
+
+                    }
+                }
+                else
+                {
+                    if (_isAddNoise)
+                    {
+                        targetRayPosition.x = currentPosition.x + _maxRange * ray.direction.x + (float)DataNoise.GaussNiose1() / 100.0f;
+                        targetRayPosition.y = currentPosition.y + _maxRange * ray.direction.y + (float)DataNoise.GaussNiose1() / 100.0f;
+                        targetRayPosition.z = currentPosition.z + _maxRange * ray.direction.z + (float)DataNoise.GaussNiose1() / 100.0f;
+                        _distances.Add(_maxRange + (float)DataNoise.GaussNiose1() / 100.0f);
+                    }
+                    else
+                    {
+                        targetRayPosition.x = currentPosition.x + _maxRange * ray.direction.x;
+                        targetRayPosition.y = currentPosition.y + _maxRange * ray.direction.y;
+                        targetRayPosition.z = currentPosition.z + _maxRange * ray.direction.z;
+                        _distances.Add(_maxRange);
+                    }
+
+                    if (_showLidar)
+                    {
+                        Debug.DrawLine(currentPosition, targetRayPosition, Color.blue);
+                    }
+                    _rayPositions.Add(targetRayPosition);
+                    _intensities.Add(255);
+                }
+            }
+            return true;
+        }
+
         public bool UpdateSensor(Vector3 currentPosition)
         {
             _distances.Clear();
             _rayPositions.Clear();
+            _intensities.Clear();
             _currentPosition = currentPosition;
             Ray ray = new Ray(_currentPosition,Vector3.zero);
             RaycastHit hit;
@@ -190,17 +295,30 @@ namespace DTUAV.Sensor_Module.LiDAR
                 ray.direction = _rayDirections[i];
                 if (Physics.Raycast(ray, out hit, _maxRange, _layerMask))
                 {
-                    if (hit.distance<_minRange)
+                    if (hit.distance < _minRange)
                     {
-                        targetRayPosition.x = currentPosition.x + _minRange * ray.direction.x;
-                        targetRayPosition.y = currentPosition.y + _minRange * ray.direction.y;
-                        targetRayPosition.z = currentPosition.z + _minRange * ray.direction.z;
+                        if (_isAddNoise)
+                        {
+                            targetRayPosition.x = currentPosition.x + _minRange * ray.direction.x + (float)DataNoise.GaussNiose1() / 100.0f;
+                            targetRayPosition.y = currentPosition.y + _minRange * ray.direction.y + (float)DataNoise.GaussNiose1() / 100.0f; ;
+                            targetRayPosition.z = currentPosition.z + _minRange * ray.direction.z + (float)DataNoise.GaussNiose1() / 100.0f; ;
+                            _distances.Add(_minRange + (float)DataNoise.GaussNiose1() / 100.0f);
+                        }
+                        else
+                        {
+                            targetRayPosition.x = currentPosition.x + _minRange * ray.direction.x;
+                            targetRayPosition.y = currentPosition.y + _minRange * ray.direction.y;
+                            targetRayPosition.z = currentPosition.z + _minRange * ray.direction.z;
+                            _distances.Add(_minRange);
+                        }
+
                         if (_showLidar)
                         {
                             Debug.DrawLine(currentPosition, targetRayPosition, Color.red);
                         }
                         _rayPositions.Add(targetRayPosition);
-                        _distances.Add(_minRange);
+                        _intensities.Add(0);
+
                     }
                     else
                     {
@@ -208,21 +326,47 @@ namespace DTUAV.Sensor_Module.LiDAR
                         {
                             Debug.DrawLine(currentPosition, hit.point, Color.red);
                         }
-                        _rayPositions.Add(hit.point);
-                        _distances.Add(hit.distance);
+
+                        if (_isAddNoise)
+                        {
+                            _noise.x = (float)DataNoise.GaussNiose1() / 100.0f;
+                            _noise.y = (float)DataNoise.GaussNiose1() / 100.0f;
+                            _noise.z = (float)DataNoise.GaussNiose1() / 100.0f;
+                            _rayPositions.Add(hit.point +_noise);
+                            _distances.Add(hit.distance + (float)DataNoise.GaussNiose1() / 100.0f);
+                        }
+                        else
+                        {
+                            _rayPositions.Add(hit.point);
+                            _distances.Add(hit.distance);
+                        }
+                        _intensities.Add(255 * (hit.distance - _minRange) / _maxRange);
+
                     }
                 }
                 else
                 {
-                    targetRayPosition.x = currentPosition.x + _maxRange * ray.direction.x;
-                    targetRayPosition.y = currentPosition.y + _maxRange * ray.direction.y;
-                    targetRayPosition.z = currentPosition.z + _maxRange * ray.direction.z;
+                    if (_isAddNoise)
+                    {
+                        targetRayPosition.x = currentPosition.x + _maxRange * ray.direction.x + (float)DataNoise.GaussNiose1() / 100.0f;
+                        targetRayPosition.y = currentPosition.y + _maxRange * ray.direction.y + (float)DataNoise.GaussNiose1() / 100.0f;
+                        targetRayPosition.z = currentPosition.z + _maxRange * ray.direction.z + (float)DataNoise.GaussNiose1() / 100.0f;
+                        _distances.Add(_maxRange + (float)DataNoise.GaussNiose1() / 100.0f);
+                    }
+                    else
+                    {
+                        targetRayPosition.x = currentPosition.x + _maxRange * ray.direction.x;
+                        targetRayPosition.y = currentPosition.y + _maxRange * ray.direction.y;
+                        targetRayPosition.z = currentPosition.z + _maxRange * ray.direction.z;
+                        _distances.Add(_maxRange);
+                    }
+
                     if (_showLidar)
                     {
                         Debug.DrawLine(currentPosition, targetRayPosition, Color.blue);
                     }
                     _rayPositions.Add(targetRayPosition);
-                    _distances.Add(_maxRange);
+                    _intensities.Add(255);
                 }
             }
             return true;
@@ -242,9 +386,12 @@ namespace DTUAV.Sensor_Module.LiDAR
             _horizontalAngleEnd = horizontalAngleEnd;
             _horizontalAngleInc = horizontalAngleInc;
             _showLidar = false;
+            _isAddNoise = false;
             _rayDirections = new List<Vector3>();
             _rayPositions = new List<Vector3>();
             _distances = new List<float>();
+            _intensities = new List<float>();
+            _noise = new Vector3();
             float currentVerticalAngle = _verticalAngleStart;
             float currenthorizontalAngle = _horizontalAngleStart;
             while (currenthorizontalAngle<=_horizontalAngleEnd)
@@ -275,9 +422,12 @@ namespace DTUAV.Sensor_Module.LiDAR
             _horizontalAngleEnd = horizontalAngleEnd;
             _horizontalAngleInc = horizontalAngleInc;
             _showLidar = showLidar;
+            _isAddNoise = false;
             _rayDirections = new List<Vector3>();
             _rayPositions = new List<Vector3>();
             _distances = new List<float>();
+            _intensities = new List<float>();
+            _noise = new Vector3();
             float currentVerticalAngle = _verticalAngleStart;
             float currenthorizontalAngle = _horizontalAngleStart;
             while (currenthorizontalAngle <= _horizontalAngleEnd)
@@ -291,7 +441,40 @@ namespace DTUAV.Sensor_Module.LiDAR
                 currenthorizontalAngle = currenthorizontalAngle + _horizontalAngleInc;
             }
         }
-
+        public Lidar(LayerMask layerMask, float minRange, float maxRange, Vector3 currentPosition,
+            float verticalAngleStart, float verticalAngleEnd, float verticalAngleInc, float horizontalAngleStart,
+            float horizontalAngleEnd, float horizontalAngleInc, bool showLidar,bool isAddNoise)
+        {
+            _layerMask = layerMask;
+            _minRange = minRange;
+            _maxRange = maxRange;
+            _currentPosition = currentPosition;
+            _verticalAngleStart = verticalAngleStart;
+            _verticalAngleEnd = verticalAngleEnd;
+            _verticalAngleInc = verticalAngleInc;
+            _horizontalAngleStart = horizontalAngleStart;
+            _horizontalAngleEnd = horizontalAngleEnd;
+            _horizontalAngleInc = horizontalAngleInc;
+            _showLidar = showLidar;
+            _isAddNoise = isAddNoise;
+            _rayDirections = new List<Vector3>();
+            _rayPositions = new List<Vector3>();
+            _distances = new List<float>();
+            _intensities = new List<float>();
+            _noise = new Vector3();
+            float currentVerticalAngle = _verticalAngleStart;
+            float currenthorizontalAngle = _horizontalAngleStart;
+            while (currenthorizontalAngle <= _horizontalAngleEnd)
+            {
+                while (currentVerticalAngle <= _verticalAngleEnd)
+                {
+                    _rayDirections.Add(new Vector3(Mathf.Cos(currentVerticalAngle * Mathf.PI / 180.0f) * Mathf.Sin(currenthorizontalAngle * Mathf.PI / 180.0f), Mathf.Sin(currentVerticalAngle * Mathf.PI / 180.0f), Mathf.Cos(currentVerticalAngle * Mathf.PI / 180.0f) * Mathf.Cos(currenthorizontalAngle * Mathf.PI / 180.0f)));
+                    currentVerticalAngle = currentVerticalAngle + _verticalAngleInc;
+                }
+                currentVerticalAngle = _verticalAngleStart;
+                currenthorizontalAngle = currenthorizontalAngle + _horizontalAngleInc;
+            }
+        }
     }
 
 
